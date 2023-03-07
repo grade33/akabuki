@@ -1,0 +1,24 @@
+include ../partials/nav
+include ../vendor/select
+
+mixin header 
+  header.header
+    .header__container.container
+      a.header__logo(href="index.html")
+        svg.header__logo-icon
+          use(xlink:href="./assets/sprite.svg#logo-header")
+      .header__content
+        +nav([
+          {content: 'Обо мне', href: 'about.html'},
+          {content: 'Услуги', href: 'services.html'},
+          {content: 'Кейсы', href: 'cases.html'},
+          {content: 'Полезные материалы', href: 'resources.html'},
+          {content: 'Блог', href: 'blog.html'},
+          {content: 'Контакты', href: 'contacts.html'},
+        ], true, 'header__nav')
+        +select([
+          {content: 'Ам'},
+          {content: 'Ру', isSelected: true},
+          {content: 'Ан'},
+        ], 'header__lang')
+        button.header__apply.btn.btn_dark(type="button") Заявка

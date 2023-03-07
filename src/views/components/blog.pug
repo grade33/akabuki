@@ -1,0 +1,15 @@
+mixin blog(blogList)
+  section.blog.section
+    .blog__container.container.column
+      h2.blog__title.title Интервью, экспертные статьи и комментарии
+      .slider-full-width.slider-full-width_right.slider-fog.slider-fog_right
+        .swiper.blog__slider 
+          ul.swiper-wrapper 
+            each blog in blogList
+              li.swiper-slide
+                a.blog__link(href="#") 
+                  .blog__img-block
+                    img.blog__img(src=blog.src, alt="")
+                    span.blog__date.btn.btn_white=blog.date
+                  h3.blog__name=blog.name
+      button.blog__more.btn.btn_circle(type="button") Читать ещё

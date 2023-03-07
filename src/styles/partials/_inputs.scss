@@ -1,0 +1,88 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+textarea {
+  resize: vertical;
+}
+
+.input {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 23px;
+  color: vars.$dark;
+  vertical-align: middle;
+  border-bottom: 1px solid vars.$divider-on-light-bg;
+  @include mix.p20;
+
+  &::placeholder {
+    color: rgba(vars.$dark, 0.5);
+  }
+
+  &_dark {
+    color: vars.$white;
+    border-color: vars.$divider-on-dark-bg;
+
+    &::placeholder {
+      color: rgba(vars.$white, 0.3);
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: vars.$dark;
+  @include mix.p16;
+
+  &_dark {
+    color: vars.$white;
+
+    .checkbox {
+      &__custom {
+        border: 1px solid vars.$divider-on-dark-bg;
+
+        &_active {
+          color: vars.$divider-on-dark-bg;
+        }
+      }
+    }
+  }
+
+  &__flag {
+    &:checked {
+      & + .checkbox__custom {
+        .checkbox__custom_active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__custom {
+    position: relative;
+    flex: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid vars.$divider-on-light-bg;
+
+    &_active {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 24px;
+      height: 24px;
+      color: vars.$divider-on-light-bg;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      content: '';
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,151 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.btn {
+  @include mix.p16;
+
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 7px 15px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &_big {
+    padding: 12px 24px;
+  }
+
+  &_dark {
+    color: vars.$white;
+    background-color: vars.$dark;
+    border-color: vars.$dark;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: vars.$dark;
+      background-color: transparent;
+      border-color: vars.$dark;
+    }
+  }
+
+  &_green {
+    color: vars.$white;
+    background-color: vars.$green;
+    border-color: vars.$green;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: vars.$green;
+      background-color: transparent;
+      border-color: vars.$green;
+    }
+  }
+
+  &_white {
+    color: vars.$dark;
+    background-color: vars.$white;
+    border-color: vars.$white;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: vars.$white;
+      background-color: transparent;
+      border-color: vars.$white;
+    }
+  }
+
+  &_transparent {
+    color: vars.$dark;
+    background-color: transparent;
+    border-color: vars.$dark;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: vars.$white;
+      background-color: vars.$red;
+      border-color: vars.$red;
+    }
+  }
+
+  &_circle {
+    min-width: 150px;
+    min-height: 150px;
+    color: vars.$white;
+    background-color: vars.$red;
+    border-color: vars.$red;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: vars.$red;
+      background-color: transparent;
+    }
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.btn-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: vars.$dark;
+  border: 1px solid vars.$divider-on-light-bg;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    background: vars.$dark;
+    border-color: vars.$dark;
+
+    svg {
+      color: vars.$white;
+    }
+  }
+
+  &_dark {
+    color: vars.$white;
+    border: 1px solid vars.$divider-on-dark-bg;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      background: vars.$white;
+      border-color: vars.$white;
+
+      svg {
+        color: vars.$dark;
+      }
+    }
+  }
+
+  &_left {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+    transition: color 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,126 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.link-list {
+  background: vars.$light-bg;
+
+  &_dark {
+    color: vars.$white;
+    background: vars.$dark;
+
+    .link-list {
+      &__btn {
+        border-color: vars.$divider-on-dark-bg;
+      }
+
+      &__link {
+        &:hover,
+        &:focus-visible,
+        &:active {
+          &::before {
+            background: vars.$hover-cards-on-dark-bg;
+          }
+
+          .link-list {
+            &__btn {
+              background: vars.$white;
+              border-color: vars.$white;
+
+              svg {
+                color: vars.$dark;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-top: -1px;
+    padding-top: 1px;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 221px;
+    padding: 59px 0;
+    padding-right: 82px;
+    border-top: 1px solid vars.$divider-on-dark-bg;
+    border-bottom: 1px solid vars.$divider-on-dark-bg;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 calc(-1 * fn.free-place());
+      transition: background-color 0.3s ease-in-out;
+      content: '';
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      &::before {
+        background: vars.$hover-cards-on-light-bg;
+      }
+
+      .link-list {
+        &__btn {
+          background: vars.$dark;
+          border-color: vars.$dark;
+
+          svg {
+            color: vars.$white;
+          }
+        }
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 485px;
+  }
+
+  &__name {
+    @include mix.h3;
+  }
+
+  &__info-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  &__right {
+    display: flex;
+    gap: 100px;
+    align-items: flex-start;
+  }
+
+  &__desc {
+    width: 555px;
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+
+  &__more {
+    align-self: center;
+  }
+}

@@ -1,0 +1,45 @@
+include ../partials/nav
+
+mixin footer 
+  footer.footer
+    .footer__container.container 
+      .footer__top 
+        .footer__info 
+          a.footer__logo(href="index.html")
+            svg.footer__logo-icon
+              use(xlink:href="./assets/sprite.svg#logo-footer")
+          p.footer__desc За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. 
+          ul.footer__social 
+            li.footer__social-item 
+              a.footer__social-link.btn.btn_dark(href="#") telegram
+            li.footer__social-item 
+              a.footer__social-link.btn.btn_dark(href="#") vk
+            li.footer__social-item 
+              a.footer__social-link.btn.btn_dark(href="#") instagram
+        ul.footer__nav-contact
+          li.footer__nav-contact-item
+            strong.footer__nav-contact-title Навигация
+            +nav([
+              {content: 'Обо мне', href: 'about.html'},
+              {content: 'Кейсы', href: 'cases.html'},
+              {content: 'Рабочий процесс', href: '#'},
+              {content: 'Блог', href: 'blog.html'},
+              {content: 'Отзывы', href: '#'},
+              {content: 'Контакты', href: 'contacts.html'},
+              {content: 'Спринты', href: '#'},
+              {content: 'Разбор резюме', href: '#'},
+              {content: 'Бизнес-консалтинг', href: '#'},
+              {content: 'Блог', href: 'blog.html'},
+              {content: 'Отзывы', href: '#'},
+              {content: 'Контакты', href: 'contacts.html'},
+            ], false, 'footer__nav')
+          li.footer__nav-contact-item
+            strong.footer__nav-contact-title Контакты
+            +nav([
+              {content: 'a_kabuki@gmail.com', href: 'mailto:a_kabuki@gmail.com'},
+              {content: '+7 862 964 2535', href: 'tel:+78629642535'},
+            ], false, 'footer__contacts', 'div')
+      .footer__bottom
+        span.footer__copyright Все права сохранены © 2022
+        a.footer__agreement(href="agreement.html") Пользовательское соглашение
+        

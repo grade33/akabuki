@@ -1,0 +1,42 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+
+.hero-home {
+  padding-top: 80px;
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    @include mix.h1;
+  }
+
+  &__content {
+    position: relative;
+    margin-top: -26px;
+  }
+
+  &__desc {
+    @include mix.p24;
+
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    max-width: 555px;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__poster {
+    margin: 0 calc(-1 * fn.free-place());
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

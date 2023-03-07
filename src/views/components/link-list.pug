@@ -1,0 +1,18 @@
+mixin link-list(data, linkList)
+  section.link-list.section(class=data.isDark ? 'link-list_dark' : '')
+    .link-list__container.container.column
+      h2.link-list__title.title=data.title
+      ul.link-list__list
+        each item in linkList
+          li.link-list__item 
+            a.link-list__link(href="#")
+              .link-list__left
+                h3.link-list__name=item.name
+                if item.info
+                  .link-list__info-block
+                    each info in item.info
+                      .link-list__info.btn(class=data.isDark ? 'btn_white' : 'btn_dark')=info
+              .link-list__right 
+                p.link-list__desc=item.desc
+                +btn-arrow('link-list__btn', false, data.isDark)
+      button.link-list__more.btn.btn_circle(type="button")=data.btn

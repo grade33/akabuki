@@ -1,0 +1,36 @@
+include ../partials/inputs
+
+mixin feedback
+  section.feedback.section 
+    .feedback__container.container
+      .feedback__content.column
+        .feedback__text-block
+          h2.feedback__title.title Напишите мне и мы создадим крутой проект вместе
+          p.feedback__desc За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. 
+        form.feedback__form(action="#") 
+          +input({
+            isDark: true,
+            type: 'text',
+            name: 'name',
+            placeholder: 'Имя',
+          }, 'feedback__field')
+          +input({
+            isDark: true,
+            type: 'email',
+            name: 'email',
+            placeholder: 'E-mail',
+          }, 'feedback__field')
+          +textarea({
+            isDark: true,
+            name: 'message',
+            placeholder: 'Сообщение',
+          }, 'feedback__field')
+          +checkbox({
+            isDark: true,
+            name: 'agreement',
+          }, 'feedback__checkbox')
+            |Я согласен с 
+            a.feedback__checkbox_link(href="#") политикой обработки персональных данных
+          button.btn.btn_circle(type="submit") Отправить
+      .feedback__img-wrap
+        img.feedback__img(src="@/img/components/feedback/feedback.jpg" alt="")

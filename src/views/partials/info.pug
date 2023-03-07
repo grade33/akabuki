@@ -1,0 +1,26 @@
+mixin info(data)
+  .info(class=data.top ? 'info_top' : '')
+    .info__content 
+      .info__text-block
+        h2.info__title=data.title
+        if data.desc
+          p.info__desc=data.desc 
+        if data.list
+          ul.info__list   
+            each item in data.list
+              li.info__item=item
+      if data.btn
+        button.info__btn.btn_big.btn.btn_transparent(type="button")
+          =data.btn
+          svg.btn__icon
+            use(xlink:href="./assets/sprite.svg#arrow-right")
+    .info__img-wrap 
+      img.info__img(src=data.src, alt="")
+      if data.imgInfo 
+        .info__img-info
+          each text, idx in data.imgInfo
+            if idx % 2 === 0
+              .btn.btn_white=text
+            else
+              .btn.btn_dark=text 
+      

@@ -1,0 +1,6 @@
+mixin btn-arrow(className = '', isLeft = false, isDark = false)
+  - const classPos = isLeft ? 'btn-arrow_left' : '';
+  - const classTheme = isDark ? 'btn-arrow_dark' : '';
+  button.btn-arrow(type="button" class=`${classPos} ${classTheme} ${className}`) 
+    svg
+      use(xlink:href="./assets/sprite.svg#arrow-right")

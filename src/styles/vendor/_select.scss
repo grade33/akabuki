@@ -1,0 +1,65 @@
+.select {
+  &.is-open {
+    .select {
+      &__head {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &__body {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__custom {
+    position: relative;
+    min-width: 150px;
+    background: #fff;
+  }
+
+  &__head {
+    width: 100%;
+    border: 1px solid #aaa;
+  }
+
+  &__body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -1px;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    .is-selected {
+      display: none;
+    }
+  }
+
+  &__option {
+    margin-bottom: 0;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #aaa;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      background-color: #aaa;
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 5px 10px;
+  }
+}

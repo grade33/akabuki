@@ -1,0 +1,75 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.footer {
+  @include mix.p16;
+
+  min-height: 500px;
+  margin-top: auto;
+  padding-top: 60px;
+  padding-bottom: 48px;
+  background: vars.$light-bg;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    justify-content: space-between;
+  }
+
+  &__top,
+  &__nav-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 320px;
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    &-icon {
+      width: 169px;
+      height: 10px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__nav-contact {
+    margin-left: auto;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &-title {
+      opacity: 0.4;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    opacity: 0.5;
+  }
+}

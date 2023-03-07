@@ -1,0 +1,6 @@
+mixin nav(navData, isRow = true, className = '', tag = 'nav')
+  #{tag}.nav(class=className class=isRow ? 'nav_row' : 'nav_column')
+    ul.nav__list
+      each navItem in navData
+        li.nav__item 
+          a.nav__item(href=navItem.href)=navItem.content

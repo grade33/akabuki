@@ -1,0 +1,11 @@
+mixin services(servicesList, title)
+  section.services.section(class=servicesList.length > 4 ? '' : 'services_few')
+    .services__container.container.column
+      h2.services__title.title=title
+      ul.services__list
+        each service in servicesList
+          li.services__item
+            a.services__link(href="#") 
+              img.services__img(src=service.src, alt="")
+              h3.services__name=service.name
+    

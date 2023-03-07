@@ -1,0 +1,35 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+
+  &__container,
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__logo {
+    &-icon {
+      width: 232px;
+      height: 28px;
+    }
+  }
+
+  &__content {
+    margin-left: auto;
+  }
+
+  &__nav {
+    margin-right: 40px;
+  }
+
+  &__lang {
+    margin-right: 12px;
+  }
+}

@@ -1,0 +1,53 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.reviews {
+  &__slider {
+    &-btn-block {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__quote {
+    @include mix.h3;
+
+    &_gray {
+      color: vars.$text-gray;
+    }
+  }
+
+  &__person {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    &-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  &__name {
+    @include mix.p16-bold;
+  }
+
+  &__job {
+    @include mix.p16;
+  }
+}
