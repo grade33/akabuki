@@ -8671,10 +8671,29 @@ function EffectCards({
 
 
 
+;// CONCATENATED MODULE: ./src/scripts/utils/breakpoints.js
+var breakpointsMin = {
+  xxl: 1440,
+  xl: 1200,
+  lg: 992,
+  md: 768,
+  sm: 576
+};
+var breakpointsMax = {
+  xxl: breakpointsMin.xxl - 0.02,
+  xl: breakpointsMin.xl - 0.02,
+  lg: breakpointsMin.lg - 0.02,
+  md: breakpointsMin.md - 0.02,
+  sm: breakpointsMin.sm - 0.02
+};
 ;// CONCATENATED MODULE: ./src/scripts/utils/classNames.js
 var classNames = {
   swiper: {
-    streamlining: 'streamlining__slider',
+    streamlining: {
+      swiper: 'streamlining__slider',
+      prevBtn: 'streamlining__slider-btn_prev',
+      nextBtn: 'streamlining__slider-btn_next'
+    },
     blog: 'blog__slider',
     reviews: {
       swiper: 'reviews__slider',
@@ -8684,15 +8703,25 @@ var classNames = {
   }
 };
 ;// CONCATENATED MODULE: ./src/scripts/modules/swiper.js
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
  // eslint-disable-line import/no-unresolved
  // eslint-disable-line import/no-unresolved
  // eslint-disable-line import/no-unresolved
  // eslint-disable-line import/no-unresolved
+
 
 function initSwiperStreamlining() {
-  var classSwiper = classNames.swiper.streamlining;
+  var classSwiper = classNames.swiper.streamlining.swiper;
   return new core(".".concat(classSwiper), {
+    modules: [Navigation],
+    navigation: {
+      prevEl: ".".concat(classNames.swiper.streamlining.prevBtn),
+      nextEl: ".".concat(classNames.swiper.streamlining.nextBtn)
+    },
     slidesPerView: 'auto',
     spaceBetween: 20,
     speed: 1000
@@ -8701,12 +8730,16 @@ function initSwiperStreamlining() {
 function initSwiperBlog() {
   var classSwiper = classNames.swiper.blog;
   return new core(".".concat(classSwiper), {
-    slidesPerView: 2.058,
+    slidesPerView: 1.155,
     spaceBetween: 20,
-    speed: 1000
+    speed: 1000,
+    breakpoints: _defineProperty({}, breakpointsMin.md, {
+      slidesPerView: 2.058
+    })
   });
 }
 function initSwiperReviews() {
+  var _breakpoints2;
   var classSwiper = classNames.swiper.reviews.swiper;
   return new core(".".concat(classSwiper), {
     modules: [Navigation],
@@ -8714,9 +8747,14 @@ function initSwiperReviews() {
       prevEl: ".".concat(classNames.swiper.reviews.prevBtn),
       nextEl: ".".concat(classNames.swiper.reviews.nextBtn)
     },
-    slidesPerView: 2.058,
+    slidesPerView: 1,
     spaceBetween: 40,
-    speed: 1000
+    speed: 1000,
+    breakpoints: (_breakpoints2 = {}, _defineProperty(_breakpoints2, breakpointsMin.md, {
+      slidesPerView: 1.072
+    }), _defineProperty(_breakpoints2, breakpointsMin.xl, {
+      slidesPerView: 2.058
+    }), _breakpoints2)
   });
 }
 ;// CONCATENATED MODULE: ./src/scripts/app.js
