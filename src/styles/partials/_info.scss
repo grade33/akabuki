@@ -4,9 +4,13 @@
 
 .info {
   display: flex;
-  gap: 75px;
+  gap: 48px 75px;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: vars.$xxl) {
+    flex-direction: column;
+    justify-content: unset;
+  }
 
   &_top {
     align-items: flex-start;
@@ -16,7 +20,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 60px;
+    gap: fn.clip(32, 60);
   }
 
   &__text-block {
@@ -24,14 +28,23 @@
     flex-direction: column;
     gap: 32px;
     max-width: 670px;
+    @media (max-width: vars.$xxl) {
+      max-width: unset;
+    }
   }
 
   &__title {
     @include mix.h2;
+    @media (max-width: vars.$md) {
+      @include mix.p24-desktop;
+    }
   }
 
   &__desc {
     max-width: 600px;
+    @media (max-width: vars.$md) {
+      display: none;
+    }
   }
 
   &__list {
@@ -62,8 +75,8 @@
 
   &__img-info {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: fn.clip(12, 20);
+    left: fn.clip(12, 20);
     display: flex;
     flex-wrap: wrap;
     gap: 8px;

@@ -51,6 +51,14 @@
   line-height: fn.clip(24, 30);
 }
 
+@mixin p24-desktop {
+  font-weight: 500;
+  font-size: 24px;
+  font-family: VisbyCF, Arial, sans-serif;
+  font-style: normal;
+  line-height: 32px;
+}
+
 @mixin p24 {
   font-weight: 500;
   font-size: fn.clip(20, 24);
@@ -65,6 +73,14 @@
   font-family: VisbyCF, Arial, sans-serif;
   font-style: normal;
   line-height: 30px;
+}
+
+@mixin p18 {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: VisbyCF, Arial, sans-serif;
+  font-style: normal;
+  line-height: 28px;
 }
 
 @mixin p16 {

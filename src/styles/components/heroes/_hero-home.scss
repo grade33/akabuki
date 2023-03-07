@@ -3,17 +3,46 @@
 @use '../../utils/functions' as fn;
 
 .hero-home {
-  padding-top: 80px;
+  padding-top: fn.clip(60, 80);
+
+  &__text-block {
+    display: flex;
+    gap: 32px 60px;
+    justify-content: space-between;
+    @media (max-width: vars.$xxl) {
+      flex-direction: column;
+      justify-content: unset;
+    }
+  }
 
   &__title {
+    @include mix.h1;
+
     position: relative;
     z-index: 2;
-    @include mix.h1;
+    margin-bottom: -26px;
+
+    @media (max-width: vars.$xxl) {
+      margin-bottom: 0;
+    }
+    @media (max-width: vars.$md) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 6;
+    margin-top: auto;
+    margin-bottom: -75px;
+    @media (max-width: vars.$md) {
+      margin-bottom: -120px;
+    }
   }
 
   &__content {
     position: relative;
-    margin-top: -26px;
   }
 
   &__desc {
@@ -23,13 +52,16 @@
     right: 0;
     bottom: 40px;
     max-width: 555px;
-  }
 
-  &__btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(-50%);
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
+
+    &-mobile {
+      @media (min-width: vars.$min-lg) {
+        display: none;
+      }
+    }
   }
 
   &__poster {

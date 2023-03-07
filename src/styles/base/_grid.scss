@@ -78,7 +78,7 @@
   width: 100%;
 }
 
-@media (--sm-min) {
+@media (min-width: vars.$min-sm) {
   .col-sm {
     flex: 1 0 0%;
   }
@@ -144,7 +144,7 @@
   }
 }
 
-@media (--md-min) {
+@media (min-width: vars.$min-md) {
   .col-md {
     flex: 1 0 0%;
   }
@@ -210,7 +210,7 @@
   }
 }
 
-@media (--lg-min) {
+@media (min-width: vars.$min-lg) {
   .col-lg {
     flex: 1 0 0%;
   }
@@ -276,7 +276,7 @@
   }
 }
 
-@media (--xl-min) {
+@media (min-width: vars.$min-xl) {
   .col-xl {
     flex: 1 0 0%;
   }
@@ -342,7 +342,7 @@
   }
 }
 
-@media (--xx-minl) {
+@media (min-width: vars.$min-xxl) {
   .col-xxl {
     flex: 1 0 0%;
   }

@@ -1,7 +1,7 @@
 @use './variables' as vars;
 
 @function clip($min-num, $max-num) {
-  $breakpoints: (vars.$sm, vars.$md, vars.$lg, vars.$xl, vars.$xxl, vars.$xxxl);
+  $breakpoints: (vars.$sm-num, vars.$md-num, vars.$lg-num, vars.$xl-num, vars.$xxl-num);
   $min-bp: vars.$min;
   $vw: null;
   $current-bp: null;

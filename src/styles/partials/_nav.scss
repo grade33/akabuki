@@ -23,6 +23,10 @@
         grid-template-rows: repeat(auto-fill, minmax(24px, 1fr));
         gap: 12px 60px;
         height: 204px;
+        @media (max-width: vars.$sm) {
+          grid-auto-flow: dense;
+          height: unset;
+        }
       }
     }
   }

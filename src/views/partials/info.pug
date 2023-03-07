@@ -15,7 +15,8 @@ mixin info(data)
           svg.btn__icon
             use(xlink:href="./assets/sprite.svg#arrow-right")
     .info__img-wrap 
-      img.info__img(src=data.src, alt="")
+      picture.info__img
+        img.info__img(src=data.src, alt="")
       if data.imgInfo 
         .info__img-info
           each text, idx in data.imgInfo

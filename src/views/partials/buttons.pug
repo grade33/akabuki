@@ -1,4 +1,4 @@
-mixin btn-arrow(className = '', isLeft = false, isDark = false)
+mixin btn-arrow(isLeft = false, isDark = false, className = '')
   - const classPos = isLeft ? 'btn-arrow_left' : '';
   - const classTheme = isDark ? 'btn-arrow_dark' : '';
   button.btn-arrow(type="button" class=`${classPos} ${classTheme} ${className}`) 

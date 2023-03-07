@@ -26,9 +26,12 @@
     top: 0;
     bottom: 0;
     z-index: 5;
-    width: 220px;
+    width: fn.clip(80, 220);
     background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0%) 100%);
     content: '';
+    @media (max-width: vars.$md) {
+      content: unset;
+    }
   }
 
   &::before {

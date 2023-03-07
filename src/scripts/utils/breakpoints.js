@@ -1,6 +1,5 @@
 export const breakpointsMin = {
-  xxxl: 1600,
-  xxl: 1400,
+  xxl: 1440,
   xl: 1200,
   lg: 992,
   md: 768,
@@ -8,7 +7,6 @@ export const breakpointsMin = {
 };
 
 export const breakpointsMax = {
-  xxxl: breakpointsMin.xxxl - 0.02,
   xxl: breakpointsMin.xxl - 0.02,
   xl: breakpointsMin.xl - 0.02,
   lg: breakpointsMin.lg - 0.02,

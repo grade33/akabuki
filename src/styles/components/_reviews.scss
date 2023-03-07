@@ -3,18 +3,31 @@
 @use '../utils/functions' as fn;
 
 .reviews {
+  &__slider-block {
+    @media (max-width: vars.$md) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
   &__slider {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip(22, 40);
+
     &-btn-block {
       display: flex;
       gap: 12px;
-      margin-bottom: 40px;
+      @media (max-width: vars.$md) {
+        order: 2;
+      }
     }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: fn.clip(22, 30);
   }
 
   &__quote {
@@ -41,6 +54,11 @@
     height: 50px;
     object-fit: contain;
     border-radius: 50%;
+
+    @media (max-width: vars.$md) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &__name {

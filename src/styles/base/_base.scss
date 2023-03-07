@@ -21,7 +21,7 @@
 }
 
 .section {
-  padding: 100px 0;
+  padding: fn.clip(60, 100) 0;
 }
 
 .main {
@@ -31,7 +31,7 @@
 .column {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: fn.clip(48, 60);
 }
 
 .title {
@@ -42,6 +42,8 @@
 
 .text-block {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   justify-content: space-between;
 
   h2 {

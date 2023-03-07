@@ -1,12 +1,17 @@
+include ../partials/buttons
+
 mixin streamlining(sliderList)
   section.streamlining.section
     .streamlining__container.container.column
       .streamlining__text-block.text-block
         h2.streamlining__title.title Как я налаживаю процесс работы с новыми клиентами
         p.streamlining__desc Верю в силу рукопожатия. Форма договоренности не имеет значения — мы выполняем свои обещания. Всегда.
-      .slider-full-width.slider-full-width_right.slider-fog.slider-fog_right
+      .swiper.streamlining__slider-block.slider-full-width.slider-full-width_right.slider-fog.slider-fog_right
         .swiper.streamlining__slider 
           ul.swiper-wrapper 
             each item in sliderList 
               li.streamlining__item.swiper-slide
-                strong.strelamlining__name=item.name
+                strong.streamlining__name=item.name
+          .streamlining__slider-btn-block
+            +btn-arrow(true, false, 'streamlining__slider-btn streamlining__slider-btn_prev')
+            +btn-arrow(false, false, 'streamlining__slider-btn streamlining__slider-btn_next')

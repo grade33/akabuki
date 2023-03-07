@@ -6,11 +6,11 @@ mixin reviews(reviewsList)
       .reviews__text-block.text-block
         h2.reviews__title.title Более 160 довольных заказчиков за 10 лет работы, большинство из которых стали друзьями
         p.reviews__desc С помощью данного генератора очень легко автоматически сгенерировать хороший отзыв, совершенно бесплатно. 
-      .slider-full-width.slider-full-width_right.slider-fog.slider-fog_right
+      .swiper.reviews__slider-block.slider-full-width.slider-full-width_right.slider-fog.slider-fog_right
         .swiper.reviews__slider 
           .reviews__slider-btn-block 
-            +btn-arrow('reviews__slider-btn reviews__slider-btn_prev', true, false)
-            +btn-arrow('reviews__slider-btn reviews__slider-btn_next', false, false)
+            +btn-arrow(true, false, 'reviews__slider-btn reviews__slider-btn_prev')
+            +btn-arrow(false, false, 'reviews__slider-btn reviews__slider-btn_next')
           ul.swiper-wrapper 
             li.swiper-slide
               .reviews__item 
@@ -19,7 +19,8 @@ mixin reviews(reviewsList)
                   span.reviews__quote_gray Он в жизни не был бизнес-тренере
                   |, но благодаря этой консультации в один момент он стал им. И теперь мы с ним вместе занимаемся бизнесом по своему вкусу, а не по чужому. 
                 .reviews__person
-                  img.reviews__avatar(src="@/img/components/reviews/person-1.png" alt="")
+                  picture.reviews__avatar
+                    img.reviews__avatar(src="@/img/components/reviews/person-1.png" alt="")
                   .reviews__person-text-block 
                     span.reviews__name Романов Сергей Егорович
                     span.reviews__job Noname Agency / Lead Designer
@@ -30,7 +31,8 @@ mixin reviews(reviewsList)
                   span.reviews__quote_gray Мне все понравилось. Все было хорошо, я осталась довольна.&nbsp;
                   |Очень понравилась консультация.»
                 .reviews__person
-                  img.reviews__avatar(src="@/img/components/reviews/person-2.png" alt="")
+                  picture.reviews__avatar
+                    img.reviews__avatar(src="@/img/components/reviews/person-2.png" alt="")
                   .reviews__person-text-block 
                     span.reviews__name Николаева Марта Антоновна
                     span.reviews__job Noname Agency / Lead Designer
@@ -39,7 +41,8 @@ mixin reviews(reviewsList)
                 blockquote.reviews__quote 
                   |«Спасибо за такую возможность. Консультация была очень полезной. Врач все объяснил доступно. Приду еще на прием.»
                 .reviews__person
-                  img.reviews__avatar(src="@/img/components/reviews/person-3.png" alt="")
+                  picture.reviews__avatar
+                    img.reviews__avatar(src="@/img/components/reviews/person-3.png" alt="")
                   .reviews__person-text-block 
                     span.reviews__name Поляков Даниил Фёдорович
                     span.reviews__job Noname Agency / Lead Designer

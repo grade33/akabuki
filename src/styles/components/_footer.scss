@@ -7,14 +7,14 @@
 
   min-height: 500px;
   margin-top: auto;
-  padding-top: 60px;
-  padding-bottom: 48px;
+  padding-top: fn.clip(48, 60);
+  padding-bottom: fn.clip(40, 48);
   background: vars.$light-bg;
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: fn.clip(40, 120);
     justify-content: space-between;
   }
 
@@ -22,13 +22,13 @@
   &__nav-contact {
     display: flex;
     flex-wrap: wrap;
-    gap: 120px;
+    gap: fn.clip(40, 120);
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: fn.clip(24, 32);
     max-width: 320px;
   }
 
@@ -71,5 +71,9 @@
 
   &__copyright {
     opacity: 0.5;
+
+    @media (max-width: vars.$md) {
+      order: 2;
+    }
   }
 }

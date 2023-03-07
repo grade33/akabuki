@@ -1,6 +1,10 @@
 export const classNames = {
   swiper: {
-    streamlining: 'streamlining__slider',
+    streamlining: {
+      swiper: 'streamlining__slider',
+      prevBtn: 'streamlining__slider-btn_prev',
+      nextBtn: 'streamlining__slider-btn_next',
+    },
     blog: 'blog__slider',
     reviews: {
       swiper: 'reviews__slider',

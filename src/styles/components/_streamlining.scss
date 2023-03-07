@@ -3,8 +3,26 @@
 @use '../utils/functions' as fn;
 
 .streamlining {
+  &__slider-block {
+    @media (max-width: vars.$md) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  
   &__slider {
     counter-reset: accCounter;
+
+    &-btn-block {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 32px;
+
+      @media (min-width: vars.$lg) {
+        display: none;
+      }
+    }
   }
 
   &__item {
@@ -12,9 +30,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
-    height: 400px;
-    padding: 0 50px;
+    width: fn.clip(328, 400);
+    height: fn.clip(328, 400);
+    padding: fn.clip(48, 64) fn.clip(29, 50);
     overflow: hidden;
     text-align: center;
     border-radius: 50%;
@@ -33,13 +51,19 @@
 
     &::before {
       position: absolute;
-      top: 40px;
+      top: fn.clip(24, 40);
       left: 50%;
       color: vars.$red;
       transform: translateX(-50%);
       content: counter(accCounter, decimal-leading-zero);
       counter-increment: accCounter;
       @include mix.p16;
+    }
+  }
+
+  &__name {
+    @media (max-width: vars.$sm) {
+      @include mix.p18;
     }
   }
 }

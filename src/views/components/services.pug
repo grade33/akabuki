@@ -6,6 +6,10 @@ mixin services(servicesList, title)
         each service in servicesList
           li.services__item
             a.services__link(href="#") 
-              img.services__img(src=service.src, alt="")
+              .services__img-wrap
+                picture.services__img
+                  source(media="(max-width: 767.98px)", srcset=service.srcMobile)
+                  img.services__img(src=service.src, alt="")
+              h3.services__name-mobile=service.name
               h3.services__name=service.name
     
