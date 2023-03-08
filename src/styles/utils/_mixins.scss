@@ -27,6 +27,14 @@
   line-height: fn.clip(40, 48);
 }
 
+@mixin h3-desktop {
+  font-weight: 500;
+  font-size: 32px;
+  font-family: VisbyCF, Arial, sans-serif;
+  font-style: normal;
+  line-height: 40px;
+}
+
 @mixin h3 {
   font-weight: 500;
   font-size: fn.clip(24, 32);
@@ -51,6 +59,7 @@
   line-height: fn.clip(24, 30);
 }
 
+// ! -desktops
 @mixin p24-desktop {
   font-weight: 500;
   font-size: 24px;

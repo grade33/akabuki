@@ -18,8 +18,11 @@
   &__content {
     width: 51.32%;
     @media (max-width: vars.$lg) {
-      order: 2;
       width: 100%;
+
+      &_bottom {
+        order: 2;
+      }
     }
   }
 

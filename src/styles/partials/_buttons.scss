@@ -78,8 +78,8 @@
   }
 
   &_circle {
-    min-width: 150px;
-    min-height: 150px;
+    width: 150px;
+    height: 150px;
     color: vars.$white;
     background-color: vars.$red;
     border-color: vars.$red;
@@ -137,15 +137,30 @@
     }
   }
 
-  &_left {
-    svg {
+  &__icon {
+    transform: rotate(0deg);
+    transition: color 0.3s ease-in-out;
+
+    &_top {
+      transform: rotate(-90deg);
+    }
+
+    &_bottom {
+      transform: rotate(90deg);
+    }
+
+    &_left {
       transform: rotate(180deg);
     }
-  }
 
-  svg {
-    width: 14px;
-    height: 14px;
-    transition: color 0.3s ease-in-out;
+    &_arrow {
+      width: 14px;
+      height: 14px;
+    }
+
+    &_chevron {
+      width: 8px;
+      height: 12px;
+    }
   }
 }

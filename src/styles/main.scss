@@ -19,7 +19,6 @@
 //  Layouts
 @use './components/header';
 @use './components/footer';
-@use './components/heroes/hero-home';
 @use './components/mission';
 @use './components/services';
 @use './components/streamlining';
@@ -27,5 +26,9 @@
 @use './components/blog';
 @use './components/reviews';
 @use './components/feedback';
+@use './components/principles';
+@use './components/application';
+@use './components/heroes/hero-home';
+@use './components/heroes/hero-about';
 
 //  Pages

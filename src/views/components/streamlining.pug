@@ -13,5 +13,13 @@ mixin streamlining(sliderList)
               li.streamlining__item.swiper-slide
                 strong.streamlining__name=item.name
           .streamlining__slider-btn-block
-            +btn-arrow(true, false, 'streamlining__slider-btn streamlining__slider-btn_prev')
-            +btn-arrow(false, false, 'streamlining__slider-btn streamlining__slider-btn_next')
+            +btn-arrow({
+              isLeft: true,
+              isDark: false,
+              isArrow: true
+            }, 'streamlining__slider-btn streamlining__slider-btn_prev')
+            +btn-arrow({
+              isRight: true,
+              isDark: false,
+              isArrow: true
+            }, 'streamlining__slider-btn streamlining__slider-btn_next')

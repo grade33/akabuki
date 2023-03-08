@@ -9,7 +9,7 @@ mixin blog(blogList)
               li.swiper-slide
                 a.blog__link(href="#") 
                   .blog__img-block
-                    picture.blog__img
+                    picture.blog__img-wrap.wh100
                       img.blog__img(src=blog.src, alt="")
                     span.blog__date.btn.btn_white=blog.date
                   h3.blog__name=blog.name

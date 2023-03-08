@@ -7,7 +7,7 @@ mixin link-list(data, linkList)
           li.link-list__item 
             a.link-list__link(href="#")
               if item.src 
-                picture.link-list__img 
+                picture.link-list__img-wrap.wh100
                   img.link-list__img(src=item.src, alt="")
               .link-list__left
                 h3.link-list__name=item.name
@@ -17,5 +17,9 @@ mixin link-list(data, linkList)
                       .link-list__info.btn(class=data.isDark ? 'btn_white' : 'btn_dark')=info
               .link-list__right 
                 p.link-list__desc=item.desc
-                +btn-arrow(false, data.isDark, 'link-list__btn')
+                +btn-arrow({
+                  isRight: true,
+                  isDark: data.isDark,
+                  isArrow: true
+                }, 'link-list__btn')
       button.link-list__more.btn.btn_circle(type="button")=data.btn

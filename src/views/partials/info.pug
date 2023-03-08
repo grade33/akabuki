@@ -14,8 +14,8 @@ mixin info(data)
           =data.btn
           svg.btn__icon
             use(xlink:href="./assets/sprite.svg#arrow-right")
-    .info__img-wrap 
-      picture.info__img
+    .info__img-block
+      picture.info__img-wrap.wh100
         img.info__img(src=data.src, alt="")
       if data.imgInfo 
         .info__img-info

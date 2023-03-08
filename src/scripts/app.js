@@ -3,6 +3,7 @@ import { initSwiperBlog, initSwiperReviews, initSwiperStreamlining } from './mod
 
 import 'normalize.css';
 import '../styles/main.scss';
+import { initAcc } from './modules/accordion';
 
 initSelect();
 
@@ -10,3 +11,6 @@ initSelect();
 initSwiperStreamlining();
 initSwiperBlog();
 initSwiperReviews();
+
+// Accordion
+initAcc()

@@ -1,0 +1,48 @@
+include ../partials/buttons
+
+mixin principles(principlesList)
+  section.principles.section
+    .principles__container.container.column
+      h2.principles__title.title Принципы, которых я придерживаюсь в работе с клиентами
+      ul.principles__list
+        each principle in principlesList
+          li.principles__item 
+            .principles__head
+              .principles__head-main
+                .principles__num
+                .principles__head-content
+                  h3.principles__name=principle.name
+                  picture.principles__icon-wrap
+                    img.principles__icon(src=principle.src, alt="")
+            .principles__body
+              .principles__desc-block
+                each desc in principle.descList
+                  p.principles__desc=desc
+      ul.principles__list-mobile
+        each principle, idx in principlesList
+          li.principles__item
+            .principles__head(data-hc-control=idx)
+              .principles__head-main
+                .principles__num
+                .principles__head-content
+                  h3.principles__name=principle.name
+                  picture.principles__icon-wrap
+                    img.principles__icon(src=principle.src, alt="")
+              .principles__body-head
+                +btn-arrow({
+                  isBottom: true,
+                  isDark: false,
+                  isChevron: true
+                }, 'principles__acc-btn')
+                .principles__desc-block-head
+                  each desc in principle.descList
+                    p.principles__desc=desc
+            .principles__body(data-hc-content=idx)
+              +btn-arrow({
+                isTop: true,
+                isDark: false,
+                isChevron: true
+              }, 'principles__acc-btn')
+              .principles__desc-block
+                each desc in principle.descList
+                  p.principles__desc=desc

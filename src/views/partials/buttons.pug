@@ -1,6 +1,10 @@
-mixin btn-arrow(isLeft = false, isDark = false, className = '')
-  - const classPos = isLeft ? 'btn-arrow_left' : '';
-  - const classTheme = isDark ? 'btn-arrow_dark' : '';
-  button.btn-arrow(type="button" class=`${classPos} ${classTheme} ${className}`) 
-    svg
-      use(xlink:href="./assets/sprite.svg#arrow-right")
+mixin btn-arrow(data, className = '')
+  - const classPos = data.isTop ? 'top' : data.isLeft ? 'left' : data.isRight ? 'right' : data.isBottom ? 'bottom' : '';
+  - const classTheme = data.isDark ? 'dark' : 'light';
+  button.btn-arrow(type="button" class=`btn-arrow_${classTheme} ${className}`) 
+    if data.isArrow
+      svg.btn-arrow__icon.btn-arrow__icon_arrow(class=`btn-arrow__icon_${classPos}`)
+        use(xlink:href="./assets/sprite.svg#arrow-right")
+    else if data.isChevron
+      svg.btn-arrow__icon.btn-arrow__icon_chevron(class=`btn-arrow__icon_${classPos}`)
+        use(xlink:href="./assets/sprite.svg#chevron-right")

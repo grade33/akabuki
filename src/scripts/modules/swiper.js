@@ -54,7 +54,7 @@ export function initSwiperReviews() {
         slidesPerView: 1.072,
       },
       [breakpointsMin.xl]: {
-        slidesPerView: 2.058,
+        slidesPerView: 2.11,
       },
     },
   });

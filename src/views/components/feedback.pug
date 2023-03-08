@@ -1,9 +1,9 @@
 include ../partials/inputs
 
-mixin feedback
+mixin feedback(data)
   section.feedback.section 
     .feedback__container.container
-      .feedback__content.column
+      .feedback__content.column(class=data.contentBottom ? 'feedback__content_bottom' : '')
         .feedback__text-block
           h2.feedback__title.title Напишите мне и мы создадим крутой проект вместе
           p.feedback__desc За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. 
@@ -32,6 +32,6 @@ mixin feedback
             |Я согласен с 
             a.feedback__checkbox_link(href="#") политикой обработки персональных данных
           button.btn.btn_circle(type="submit") Отправить
-      .feedback__img-wrap
-        picture.feedback__img
-          img.feedback__img(src="@/img/components/feedback/feedback.jpg" alt="")
+      .feedback__img-block
+        picture.feedback__img-wrap.wh100
+          img.feedback__img(src=data.src alt="")

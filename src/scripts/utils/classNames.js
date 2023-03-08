@@ -11,5 +11,5 @@ export const classNames = {
       prevBtn: 'reviews__slider-btn_prev',
       nextBtn: 'reviews__slider-btn_next',
     },
-  }
+  },
 };

@@ -1,0 +1,11 @@
+mixin hero-about
+  section.hero-about
+    .hero-about__container.container 
+      .hero-about__text-block
+        h1.hero-about__title Обо мне
+        p.hero-about__desc Бизнес-консультант — часто становится «спасательным кругом» для предпринимателя малого или среднего бизнеса
+      .hero-about__img-block
+        picture.hero-about__img-wrap.wh100
+          source(media="(max-width: 767.98px)" srcset="@/img/components/heroes/about/poster-mobile.jpg")
+          img.hero-about__img(src="@/img/components/heroes/about/poster.jpg" alt="")
+
