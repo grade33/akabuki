@@ -1,0 +1,20 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'Услуги';
+  - const pageName = 'sevices-page';
+
+block content
+  include ../components/heroes/hero-services
+  include ../components/reviews
+  include ../components/blog
+  include ../partials/connect
+
+  +hero-services
+  +reviews
+  +blog([
+    {name: 'Методология SCRUM в Битрикс24 и digital-индустрии', src:'@/img/blog/blog-1.jpg', date: '21 Декабря 2022' },
+    {name: 'Успей открыть свой бизнес пока другие в панике бегут с рынка', src:'@/img/blog/blog-2.jpg', date: '21 Декабря 2022' },
+    {name: 'Как создать наиболее кликабельный заголовок без регистрации и СМС', src:'@/img/blog/blog-3.jpg', date: '2022' },
+  ])
+  +connect

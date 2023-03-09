@@ -1,0 +1,33 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.connect {
+  width: 100%;
+  padding: fn.clip(40, 80) 0;
+  color: vars.$white;
+  background: vars.$dark;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include mix.h1;
+
+    @media (max-width: vars.$md) {
+      @include mix.h3-desktop;
+    }
+  }
+
+  &__btn {
+    width: fn.clip(48, 100);
+    height: fn.clip(48, 100);
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

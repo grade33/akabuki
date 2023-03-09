@@ -1,14 +1,30 @@
+include ../../partials/info
+
 mixin hero-home
-  section.hero-home
-    .hero-home__container.container 
+  section.hero-home.hero
+    .hero-home__container.hero__container.container 
       .hero-home__text-block
-        h1.hero-home__title AKABUKI стимулирует преобразования и строит предприятия
+        h1.hero-home__title.hero__title.hero__title_small AKABUKI стимулирует преобразования и строит предприятия
         p.hero-home__desc-mobile Улучшаю продукты самого крупного банка России — Сбера: от создания баннеров до разработки сервисов. 
         button.hero-home__btn.btn.btn_circle(type="button") Написать
       .hero-home__content
         p.hero-home__desc Улучшаю продукты самого крупного банка России — Сбера: от создания баннеров до разработки сервисов. 
         .hero-home__poster
           picture.hero-home__img-wrap.wh100
-            source(media="(max-width: 767.98px)", srcset="@/img/components/heroes/home/poster-mobile.jpg")
-            img.hero-home__img(src="@/img/components/heroes/home/poster.jpg", alt="")
+            source(media="(max-width: 767.98px)", srcset="@/img/heroes/home/poster-mobile.jpg")
+            img.hero-home__img(src="@/img/heroes/home/poster.jpg", alt="")
+      +info({
+        top: true,
+        src: '@/img/heroes/home/info.jpg',
+        title: 'Моя миссия - просвещение и подтверждение гипотез научным подходом и профессиональной реализацией услуг. Вернуть веру в индивидуальных экспертов.',
+        desc: 'За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. При этом соблюдали обновленный брендбук и выбирали лучшие решения, которые упрощали жизнь пользователей.',
+        link: {
+          text: 'Обо мне',
+          href: 'about.html'
+        },
+        imgInfo: [
+          'Анастасия Кабуки',
+          'Специалист – роль',
+        ],
+      })
     

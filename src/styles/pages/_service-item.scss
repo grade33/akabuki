@@ -2,6 +2,10 @@
 @use '../utils/variables' as vars;
 @use '../utils/functions' as fn;
 
-.mission {
-  background: vars.$light-bg;
+.service-item-page {
+  &__poster {
+    @media (max-width: vars.$md) {
+      display: none;
+    }
+  }
 }

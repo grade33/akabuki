@@ -15,11 +15,16 @@
 @use './partials/lang';
 @use './partials/info';
 @use './partials/slider';
+@use './partials/connect';
+@use './partials/poster';
 
 //  Layouts
+@use './components/heroes/hero';
+@use './components/heroes/hero-home';
+@use './components/heroes/hero-services';
+@use './components/heroes/hero-service-item';
 @use './components/header';
 @use './components/footer';
-@use './components/mission';
 @use './components/services';
 @use './components/streamlining';
 @use './components/link-list';
@@ -28,7 +33,7 @@
 @use './components/feedback';
 @use './components/principles';
 @use './components/application';
-@use './components/heroes/hero-home';
-@use './components/heroes/hero-about';
+@use './components/benefits';
 
 //  Pages
+@use './pages/service-item';

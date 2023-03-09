@@ -3,8 +3,6 @@
 @use '../../utils/functions' as fn;
 
 .hero-home {
-  padding-top: fn.clip(60, 80);
-
   &__text-block {
     display: flex;
     gap: 32px 60px;
@@ -16,18 +14,12 @@
   }
 
   &__title {
-    @include mix.h1;
-
     position: relative;
     z-index: 2;
     margin-bottom: -26px;
 
     @media (max-width: vars.$xxl) {
       margin-bottom: 0;
-    }
-    @media (max-width: vars.$md) {
-      font-size: 36px;
-      line-height: 40px;
     }
   }
 
@@ -46,8 +38,6 @@
   }
 
   &__desc {
-    @include mix.p24;
-
     position: absolute;
     right: 0;
     bottom: 40px;

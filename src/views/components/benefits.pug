@@ -1,0 +1,14 @@
+mixin benefits(benefitsData)
+  section.benefits.section 
+    .benefits__container.container.column
+      h2.benefits__title.title Что вам даст эта услуга
+      ul.benefits__list
+        each benefit in benefitsData
+          li.benefits__item 
+            .benefits__name-block 
+              span.benefits__num
+              h3.benefits__name=benefit.name
+            .benefits__desc-block
+              each desc in benefit.descList
+                p.benefits__desc=desc
+      

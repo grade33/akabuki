@@ -1,0 +1,14 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+
+.hero-service-item {
+  padding-top: fn.clip(32, 80);
+
+  &__title-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+  }
+}

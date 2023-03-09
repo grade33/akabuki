@@ -13,7 +13,7 @@
       @return clamp(#{$min-num * 1px}, #{(round($vw * 100) / 100) * 1vw}, #{$max-num * 1px});
     }
   }
-  @return $vw;
+  @return clamp(#{$min-num * 1px}, #{(round($vw * 100) / 100) * 1vw}, #{$max-num * 1px});
 }
 
 @function free-place() {

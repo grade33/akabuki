@@ -1,0 +1,13 @@
+include ./buttons
+
+mixin connect
+  a.connect(href="contacts.html") 
+    .connect__container.container 
+      h1.connect__title Законнектимся?
+      +btn-arrow({
+          isRight: true,
+          isDark: true,
+          isArrow: true,
+        }, 
+        'connect__btn'
+      )

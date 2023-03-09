@@ -1,6 +1,9 @@
 mixin info(data)
-  .info(class=data.top ? 'info_top' : '')
-    .info__content 
+  - const classContentOrder = data.contentOrder ? 'info__content-order' : '';
+  - const classContentOrderMobile = data.contentOrderMobile ? 'info__content-order_mobile' : '';
+  - const classContentTop = data.top ? 'info_top' : '';
+  .info(class=classContentTop)
+    .info__content(class=`${classContentOrder} ${classContentOrderMobile}`)
       .info__text-block
         h2.info__title=data.title
         if data.desc
@@ -9,9 +12,9 @@ mixin info(data)
           ul.info__list   
             each item in data.list
               li.info__item=item
-      if data.btn
-        button.info__btn.btn_big.btn.btn_transparent(type="button")
-          =data.btn
+      if data.link
+        a.info__link.btn_big.btn.btn_transparent(href=data.link.href)
+          =data.link.text
           svg.btn__icon
             use(xlink:href="./assets/sprite.svg#arrow-right")
     .info__img-block

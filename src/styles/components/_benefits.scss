@@ -1,0 +1,57 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.benefits {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    counter-reset: counter;
+  }
+
+  &__item {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    margin-top: -1px;
+    padding: fn.clip(32, 60) 0;
+    padding-right: fn.clip(32, 70);
+    border-top: 1px solid vars.$divider-on-light-bg;
+    border-bottom: 1px solid vars.$divider-on-light-bg;
+    @media (max-width: vars.$xl) {
+      padding-right: 0;
+    }
+    @media (max-width: vars.$lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__name-block {
+    display: flex;
+    gap: fn.clip(24, 90);
+    @include mix.h3;
+    @media (max-width: vars.$xl) {
+      gap: 24px;
+    }
+  }
+
+  &__num {
+    min-width: fn.clip(24, 40);
+    color: vars.$gray-text;
+
+    &::before {
+      content: counter(counter);
+      counter-increment: counter;
+    }
+  }
+
+  &__desc-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    @media (max-width: vars.$lg) {
+      max-width: unset;
+    }
+  }
+}

@@ -8,3 +8,14 @@ mixin btn-arrow(data, className = '')
     else if data.isChevron
       svg.btn-arrow__icon.btn-arrow__icon_chevron(class=`btn-arrow__icon_${classPos}`)
         use(xlink:href="./assets/sprite.svg#chevron-right")
+
+mixin link-arrow(data, className = '')
+  - const classPos = data.isTop ? 'top' : data.isLeft ? 'left' : data.isRight ? 'right' : data.isBottom ? 'bottom' : '';
+  - const classTheme = data.isDark ? 'dark' : 'light';
+  a.btn-arrow(href=data.href class=`btn-arrow_${classTheme} ${className}`) 
+    if data.isArrow
+      svg.btn-arrow__icon.btn-arrow__icon_arrow(class=`btn-arrow__icon_${classPos}`)
+        use(xlink:href="./assets/sprite.svg#arrow-right")
+    else if data.isChevron
+      svg.btn-arrow__icon.btn-arrow__icon_chevron(class=`btn-arrow__icon_${classPos}`)
+        use(xlink:href="./assets/sprite.svg#chevron-right")

@@ -1,12 +1,11 @@
 extends ../layouts/main
 
 block vars
-  - const title = 'Home';
-  - const pageName = 'home-page';
+  - const title = 'Обо мне';
+  - const pageName = 'about-page';
 
 block content
   include ../components/heroes/hero-about
-  include ../components/mission
   include ../components/principles
   include ../components/application
   include ../components/reviews
@@ -14,22 +13,10 @@ block content
   include ../components/blog
 
   +hero-about
-  +mission({
-    top: true,
-    src: '@/img/components/mission/mission-2.jpg',
-    title: 'Моя миссия - вернуть веру в индивидуальных экспертов.',
-    desc: 'За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. При этом соблюдали обновленный брендбук и выбирали лучшие решения, которые упрощали жизнь пользователей.',
-    list: [
-      'Пункты – это всего лишь пункты и точка.',
-      'Заработок не показатель, деньги – показатель.',
-      'Умные мысли часто преследовали его, но он был быстрее.',
-      'Давайте не будем уничать в этом дизайне.'
-    ]
-  })
   +principles([
     {
       name: 'Доверие',
-      src: '@/img/components/principles/principle-1.svg',
+      src: '@/img/principles/principle-1.svg',
       descList: [
         'Если разобраться, то с доверием все на самом деле предельно рационально. В этом вопросе не так много идеализма, как может показаться.',
         'Необходимость проявлять доверие базируется на моей собственной оценке соотношения затраченных усилий и получаемых выгод (другими словами, costs/benefits analysis).',
@@ -37,7 +24,7 @@ block content
     },
     {
       name: 'Честность',
-      src: '@/img/components/principles/principle-2.svg',
+      src: '@/img/principles/principle-2.svg',
       descList: [
         'Это очень комплексный, но очень важный принцип. Вкратце, его можно сформулировать просто как “не обманывать”.',
         'Здесь, помимо того, что “обманывать плохо” (это правда), опять же, все достаточно рационально – обманывая, вы часто получаете краткосрочно выгодный вам результат, но создаёте долгосрочные репутационные, а иногда даже юридические риски.',
@@ -45,14 +32,14 @@ block content
     },
     {
       name: 'Процесс имеет значение',
-      src: '@/img/components/principles/principle-3.svg',
+      src: '@/img/principles/principle-3.svg',
       descList: [
         'Для меня результаты, достигнутые путем нарушения этических норм, недопустимы.'
       ]
     },
     {
       name: 'Стараться понять мотивацию',
-      src: '@/img/components/principles/principle-4.svg',
+      src: '@/img/principles/principle-4.svg',
       descList: [
         'Очень много раз я обнаруживал себя в ситуациях, когда я ошибочно судил о поведении людей, не понимая до конца его причины. Пытаться понять – на практике один из самых сложных (лично для меня) навыков, но он очень важен.',
         'Поэтому я целенаправленно работаю над тем, чтобы глубже вникать в причины того или иного поведения людей, и пытаться лучше понять собеседника.',
@@ -61,9 +48,9 @@ block content
   ])
   +application
   +reviews
-  +feedback({src: '@/img/components/feedback/feedback-2.jpg'})
+  +feedback({src: '@/img/feedback/feedback-2.jpg'})
   +blog([
-    {name: 'Методология SCRUM в Битрикс24 и digital-индустрии', src:'@/img/components/blog/blog-1.jpg', date: '21 Декабря 2022' },
-    {name: 'Успей открыть свой бизнес пока другие в панике бегут с рынка', src:'@/img/components/blog/blog-2.jpg', date: '21 Декабря 2022' },
-    {name: 'Как создать наиболее кликабельный заголовок без регистрации и СМС', src:'@/img/components/blog/blog-3.jpg', date: '2022' },
+    {name: 'Методология SCRUM в Битрикс24 и digital-индустрии', src:'@/img/blog/blog-1.jpg', date: '21 Декабря 2022' },
+    {name: 'Успей открыть свой бизнес пока другие в панике бегут с рынка', src:'@/img/blog/blog-2.jpg', date: '21 Декабря 2022' },
+    {name: 'Как создать наиболее кликабельный заголовок без регистрации и СМС', src:'@/img/blog/blog-3.jpg', date: '2022' },
   ])

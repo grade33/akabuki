@@ -2,8 +2,11 @@
 @use '../../utils/variables' as vars;
 @use '../../utils/functions' as fn;
 
-.hero-about {
-  padding-top: fn.clip(60, 80);
+.hero {
+  @include mix.p24;
+
+  padding: fn.clip(60, 80) 0 fn.clip(60, 100);
+  background: vars.$light-bg;
 
   &__container {
     display: flex;
@@ -14,25 +17,20 @@
   &__text-block {
     display: flex;
     flex-direction: column;
-    gap: fn.clip(32, 60)
+    gap: fn.clip(32, 60);
   }
 
   &__title {
     @include mix.h1;
+    
+    &_small {
+      @media (max-width: vars.$md) {
+        @include mix.h2;
+      }
+    }
   }
 
   &__desc {
-    @include mix.p24;
-
     max-width: 670px;
-  }
-
-  &__img-block {
-    margin-right: calc(-1 * fn.free-place());
-    margin-left: calc(-1 * fn.free-place());
-  }
-
-  &__img {
-    width: 100%;
   }
 }

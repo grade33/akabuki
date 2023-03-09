@@ -68,7 +68,7 @@
     @include mix.h3;
 
     min-width: fn.clip(24, 40);
-    color: vars.$text-gray;
+    color: vars.$gray-text;
 
     &::before {
       content: counter(counter);

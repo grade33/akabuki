@@ -1,0 +1,7 @@
+mixin poster(imgData, className = '')
+  .poster(class=className)
+    picture.poster__img-wrap.wh100
+      if imgData.srcMobile
+        source(media="(max-width: 767.98px)" srcset=imgData.srcMobile)
+      img.poster__img(src=imgData.src alt="")
+

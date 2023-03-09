@@ -7,7 +7,9 @@
   gap: 48px 75px;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: vars.$xxl) {
+  @include mix.p20;
+
+  @media (max-width: vars.$xl) {
     flex-direction: column;
     justify-content: unset;
   }
@@ -21,6 +23,19 @@
     flex-direction: column;
     flex-grow: 1;
     gap: fn.clip(32, 60);
+    @media (max-width: vars.$xl) {
+      width: 100%;
+    }
+
+    &-order {
+      order: 2;
+
+      &_mobile {
+        @media (max-width: vars.$xl) {
+          order: 2;
+        }
+      }
+    }
   }
 
   &__text-block {
@@ -28,7 +43,7 @@
     flex-direction: column;
     gap: fn.clip(24, 32);
     max-width: 670px;
-    @media (max-width: vars.$xxl) {
+    @media (max-width: vars.$xl) {
       max-width: unset;
     }
   }
@@ -70,6 +85,13 @@
   &__img-block {
     position: relative;
     flex-grow: 1;
+    @media (max-width: vars.$xl) {
+      align-self: flex-start;
+    }
+  }
+
+  &__img {
+    min-height: 375px;
   }
 
   &__img-info {

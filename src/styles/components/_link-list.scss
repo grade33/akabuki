@@ -50,7 +50,6 @@
   &__link {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
     gap: 32px;
     align-items: flex-start;
     justify-content: space-between;
@@ -60,9 +59,12 @@
     border-top: 1px solid vars.$divider-on-dark-bg;
     border-bottom: 1px solid vars.$divider-on-dark-bg;
 
-    @media (max-width: vars.$md) {
-      min-height: unset;
+    @media (max-width: vars.$xxl) {
       padding-right: 0;
+    }
+    @media (max-width: vars.$lg) {
+      flex-direction: column;
+      min-height: unset;
     }
 
     &::before {
@@ -122,20 +124,20 @@
 
   &__right {
     display: flex;
-    gap: 100px;
+    gap: fn.clip(15, 100);
     align-items: flex-start;
   }
 
   &__desc {
     width: 555px;
-    @media (max-width: vars.$md) {
-      width: 100%;
+    @media (max-width: vars.$xxl) {
+      width: unset;
     }
   }
 
   &__btn {
     margin-left: auto;
-    @media (max-width: vars.$md) {
+    @media (max-width: vars.$lg) {
       display: none;
     }
   }

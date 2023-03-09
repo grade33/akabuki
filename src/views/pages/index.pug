@@ -1,12 +1,11 @@
 extends ../layouts/main
 
 block vars
-  - const title = 'Home';
+  - const title = 'AKABUKI';
   - const pageName = 'home-page';
 
 block content
   include ../components/heroes/hero-home
-  include ../components/mission
   include ../components/services
   include ../components/streamlining
   include ../components/link-list
@@ -15,42 +14,31 @@ block content
   include ../components/feedback
 
   +hero-home
-  +mission({
-    top: true,
-    src: '@/img/components/mission/mission-1.jpg',
-    title: 'Моя миссия - просвещение и подтверждение гипотез научным подходом и профессиональной реализацией услуг. Вернуть веру в индивидуальных экспертов.',
-    desc: 'За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. При этом соблюдали обновленный брендбук и выбирали лучшие решения, которые упрощали жизнь пользователей.',
-    btn: 'Обо мне',
-    imgInfo: [
-      'Анастасия Кабуки',
-      'Специалист – роль',
-    ],
-  })
   +services([
     { 
       name: 'Личная консультация', 
-      src: '@/img/components/services/service-1.jpg',
-      srcMobile: '@/img/components/services/service-mobile-1.jpg'
+      src: '@/img/services/service-1.jpg',
+      srcMobile: '@/img/services/service-mobile-1.jpg'
     },
     { 
       name: 'Анализ бизнеса', 
-      src: '@/img/components/services/service-2.jpg',
-      srcMobile: '@/img/components/services/service-mobile-2.jpg'
+      src: '@/img/services/service-2.jpg',
+      srcMobile: '@/img/services/service-mobile-2.jpg'
     },
     { 
       name: 'Live-семинары', 
-      src: '@/img/components/services/service-3.jpg',
-      srcMobile: '@/img/components/services/service-mobile-3.jpg'
+      src: '@/img/services/service-3.jpg',
+      srcMobile: '@/img/services/service-mobile-3.jpg'
     },
     { 
       name: 'Спринты', src:
-        '@/img/components/services/service-4.jpg',
-        srcMobile: '@/img/components/services/service-mobile-4.jpg'
+        '@/img/services/service-4.jpg',
+        srcMobile: '@/img/services/service-mobile-4.jpg'
     },
     { 
       name: 'Проверка резюме', 
-      src: '@/img/components/services/service-5.jpg',
-      srcMobile: '@/img/components/services/service-mobile-5.jpg'
+      src: '@/img/services/service-5.jpg',
+      srcMobile: '@/img/services/service-mobile-5.jpg'
     },
   ], 'Услуги, которые улучшат процессы в вашем бизнесе')
   +streamlining([
@@ -72,9 +60,9 @@ block content
       { name: 'Образование', desc: 'Мини-курсы по обучению, где вы погрузитесь в аналитику.' },
   ])
   +blog([
-    {name: 'Методология SCRUM в Битрикс24 и digital-индустрии', src:'@/img/components/blog/blog-1.jpg', date: '21 Декабря 2022' },
-    {name: 'Успей открыть свой бизнес пока другие в панике бегут с рынка', src:'@/img/components/blog/blog-2.jpg', date: '21 Декабря 2022' },
-    {name: 'Как создать наиболее кликабельный заголовок без регистрации и СМС', src:'@/img/components/blog/blog-3.jpg', date: '2022' },
+    {name: 'Методология SCRUM в Битрикс24 и digital-индустрии', src:'@/img/blog/blog-1.jpg', date: '21 Декабря 2022' },
+    {name: 'Успей открыть свой бизнес пока другие в панике бегут с рынка', src:'@/img/blog/blog-2.jpg', date: '21 Декабря 2022' },
+    {name: 'Как создать наиболее кликабельный заголовок без регистрации и СМС', src:'@/img/blog/blog-3.jpg', date: '2022' },
   ])
   +link-list(
     { 
@@ -87,26 +75,26 @@ block content
         name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто', 
         info: ['+150% заявок', '+500% посетителей'], 
         desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. ',
-        src: '@/img/components/cases/case-1.jpg'
+        src: '@/img/cases/case-1.jpg'
       },
       { 
         name: 'SEO-поддержка и бизнес-консультация ТОИР-М', 
         info: ['+150% заявок', '+500% посетителей'], 
         desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. ',
-        src: '@/img/components/cases/case-2.jpg'
+        src: '@/img/cases/case-2.jpg'
       },
       { 
         name: 'Аналитика воронок продаж бренда KFP', 
         info: ['+150% заявок', '+500% посетителей'], 
         desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. ',
-        src: '@/img/components/cases/case-3.jpg'
+        src: '@/img/cases/case-3.jpg'
       },
       { 
         name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто', 
         info: ['+150% заявок', '+500% посетителей'], 
         desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. ',
-        src: '@/img/components/cases/case-4.jpg'
+        src: '@/img/cases/case-4.jpg'
       },
   ])
   +reviews
-  +feedback({src: '@/img/components/feedback/feedback-1.jpg', contentBottom: true})
+  +feedback({src: '@/img/feedback/feedback-1.jpg', contentBottom: true})

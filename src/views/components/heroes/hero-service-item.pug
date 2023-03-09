@@ -1,0 +1,34 @@
+include ../../partials/buttons
+include ../../partials/poster
+include ../../partials/info
+
+mixin hero-service-item
+  section.hero-service-item.hero
+    .hero-service-item__container.hero__container.container
+      .hero-service-item__text-block.hero__text-block
+        .hero-service-item__title-block 
+          +link-arrow({
+            href: 'services.html',
+            isLeft: true,
+            isDark: false,
+            isArrow: true
+          }, 'hero-service-item__back')
+          h1.hero-service-item__title.hero__title.hero__title_small Анализ бизнеса
+        p.hero-service-item__desc.hero__desc Бизнес-консультант — часто становится «спасательным кругом» для предпринимателя малого или среднего бизнеса
+      +poster({
+        srcMobile: '@/img/heroes/service-item/poster-mobile.jpg',
+        src: '@/img/heroes/service-item/poster.jpg',
+      })
+      +info({
+        top: true,
+        src: '@/img/heroes/service-item/info.jpg',
+        title: 'Моя миссия - вернуть веру в индивидуальных экспертов.',
+        desc: 'За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. При этом соблюдали обновленный брендбук и выбирали лучшие решения, которые упрощали жизнь пользователей.',
+        list: [
+          'Пункты – это всего лишь пункты и точка.',
+          'Заработок не показатель, деньги – показатель.',
+          'Умные мысли часто преследовали его, но он был быстрее.',
+          'Давайте не будем уничать в этом дизайне.'
+        ]
+      })
+      
