@@ -1,0 +1,13 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'Кейсы';
+  - const pageName = 'cases-page';
+
+block content
+  include ../components/heroes/hero-cases
+  include ../partials/connect
+
+  +hero-cases
+  +connect
+  

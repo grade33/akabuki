@@ -1,0 +1,43 @@
+mixin grid-list(list)
+  .grid-list
+    ul.grid-list__inner
+      each item, idx in list
+        if idx % 2 === 0
+          a.grid-list__item(href=item.href class=idx===0 ? 'grid-list__item_first' : '')
+            .grid-list__img-block
+              picture.grid-list__img-wrap
+                source(media="(max-width: 991.98px)", srcset=item.srcMobile)
+                img.grid-list__img(src=item.src, alt="")
+              if item.date
+                .grid-list__date.btn.btn_white=item.date
+            .grid-list__text-block 
+              h3.grid-list__name=item.name
+              if item.desc
+                p.grid-list__desc=item.desc
+            if item.btnList
+              .grid-list__btn-wrap
+                each text, idx in item.btnList
+                  if idx % 2 === 0
+                    .btn.btn_dark=text 
+                  else
+                    .btn.btn_green=text
+    ul.grid-list__inner
+      each item, idx in list
+        if idx % 2 !== 0
+          a.grid-list__item(href=item.href)
+            picture.grid-list__img-wrap
+              source(media="(max-width: 991.98px)", srcset=item.srcMobile)
+              img.grid-list__img(src=item.src, alt="")
+            .grid-list__text-block 
+              h3.grid-list__name=item.name
+              if item.desc
+                p.grid-list__desc=item.desc
+            if item.btnList
+              .grid-list__btn-wrap
+                each text, idx in item.btnList
+                  if idx % 2 === 0
+                    .btn.btn_dark=text 
+                  else
+                    .btn.btn_green=text
+    
+

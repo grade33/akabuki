@@ -3,15 +3,13 @@
 @use '../../utils/functions' as fn;
 
 .hero {
-  @include mix.p24;
-
   padding: fn.clip(60, 80) 0 fn.clip(60, 100);
   background: vars.$light-bg;
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: fn.clip(60, 100)
+    gap: fn.clip(60, 100);
   }
 
   &__text-block {
@@ -22,7 +20,7 @@
 
   &__title {
     @include mix.h1;
-    
+
     &_small {
       @media (max-width: vars.$md) {
         @include mix.h2;
@@ -31,6 +29,8 @@
   }
 
   &__desc {
+    @include mix.p24;
+
     max-width: 670px;
   }
 }

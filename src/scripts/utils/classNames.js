@@ -12,4 +12,10 @@ export const classNames = {
       nextBtn: 'reviews__slider-btn_next',
     },
   },
+  masonry: {
+    gridList: {
+      list: 'grid-list',
+      item: 'grid-list__item'
+    }
+  }
 };

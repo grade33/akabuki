@@ -8700,6 +8700,12 @@ var classNames = {
       prevBtn: 'reviews__slider-btn_prev',
       nextBtn: 'reviews__slider-btn_next'
     }
+  },
+  masonry: {
+    gridList: {
+      list: 'grid-list',
+      item: 'grid-list__item'
+    }
   }
 };
 ;// CONCATENATED MODULE: ./src/scripts/modules/swiper.js
