@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <script defer src="./assets/scripts/main.js"> </script>
+    <title>Контакты</title>
+  </head>
+  <body>
+    <div class="app contacts-page">
+            <header class="header">
+              <div class="header__container container"><a class="header__logo" href="index.html">
+                  <svg class="header__logo-icon">
+                    <use xlink:href="./assets/sprite.svg#logo-header"></use>
+                  </svg></a>
+                <div class="header__content">
+                        <nav class="nav header__nav nav_row">
+                          <ul class="nav__list">
+                            <li class="nav__item"> <a class="nav__item" href="about.html">Обо мне</a></li>
+                            <li class="nav__item"> <a class="nav__item" href="services.html">Услуги</a></li>
+                            <li class="nav__item"> <a class="nav__item" href="cases.html">Кейсы</a></li>
+                            <li class="nav__item"> <a class="nav__item" href="materials.html">Полезные материалы</a></li>
+                            <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
+                            <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
+                          </ul>
+                        </nav>
+                        <div class="select lang header__lang">
+                          <div class="select__custom">
+                            <button class="select__head" type="button"> </button>
+                            <div class="select__body"> 
+                              <button class="select__option"><span class="select__item">Ам</span></button>
+                              <button class="select__option is-selected"><span class="select__item">Ру</span></button>
+                              <button class="select__option"><span class="select__item">Ан</span></button>
+                            </div>
+                          </div>
+                        </div>
+                  <button class="header__apply btn btn_dark" type="button">Заявка</button>
+                </div>
+                <div class="header__bar">
+                  <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
+                </div>
+              </div>
+            </header>
+      <div class="main">
+                <section class="hero-contacts hero">
+                  <div class="hero-contacts__container hero__container container">
+                    <h1 class="hero-contacts__title hero__title">Контакты</h1>
+                    <div class="hero-contacts__info">
+                      <div class="hero-contacts__info-block"><span class="hero-contacts__info-name">Связаться в Telegram</span><a class="hero-contacts__info-link" href="https://t.me/anastasia_kabuki">@anastasia_kabuki</a></div>
+                      <div class="hero-contacts__info-block"><span class="hero-contacts__info-name">Написать на почту</span><a class="hero-contacts__info-link" href="hello@akabuki.pro">hello@akabuki.pro</a></div>
+                      <div class="hero-contacts__info-block"><span class="hero-contacts__info-name">Позвонить на домофон</span><a class="hero-contacts__info-link" href="tel:+4915124503973">+49 1512 450-39-73</a></div>
+                    </div>
+                  </div>
+                </section>
+                <section class="contacts">
+                  <div class="contacts__container container">
+                    <div class="contacts__left">
+                      <h2 class="contacts__title">Заполняйте заявочку</h2>
+                      <form class="contacts__form" action="#"> 
+                        <div class="contacts__fields-block">
+                                  <div class="contacts__field">
+                                    <label class="visually-hidden" for="name"> </label>
+                                    <input class="input" id="name" placeholder="Имя" name="name" type="text">
+                                  </div>
+                                  <div class="contacts__field">
+                                    <label class="visually-hidden" for="company"> </label>
+                                    <input class="input" id="company" placeholder="Компания" name="company" type="text">
+                                  </div>
+                                  <div class="contacts__field">
+                                    <label class="visually-hidden" for="contact"> </label>
+                                    <input class="input" id="contact" placeholder="Телеграм или номер телефона" name="contact" type="text">
+                                  </div>
+                                  <div class="contacts__field">
+                                    <label class="visually-hidden" for="message"> </label>
+                                    <textarea class="input" id="message" rows="1" placeholder="Расскажите кратко о задаче" name="message"></textarea>
+                                  </div>
+                                  <div class="pick  contacts__field"><span class="pick__text">Бюджет</span>
+                                    <div class="pick__list">
+                                      <label class="pick__radio">
+                                        <input class="visually-hiddens pick__flag" type="radio" value="&lt;10000" name="amount"><span class="pick__custom">&lt;10.000€</span>
+                                      </label>
+                                      <label class="pick__radio">
+                                        <input class="visually-hiddens pick__flag" type="radio" value="10000-20000" name="amount"><span class="pick__custom">10.000€ - 20.000€</span>
+                                      </label>
+                                      <label class="pick__radio">
+                                        <input class="visually-hiddens pick__flag" type="radio" value="20000-50000" name="amount"><span class="pick__custom">20.000€ - 50.000€</span>
+                                      </label>
+                                      <label class="pick__radio">
+                                        <input class="visually-hiddens pick__flag" type="radio" value="&gt;50000" name="amount"><span class="pick__custom">&gt;50.000€</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                        </div>
+                        <div class="contacts__btn-block">
+                          <button class="btn btn_circle contacts__submit" type="submit">Отправить</button>
+                                  <label class="checkbox  contacts__checkbox">
+                                    <input class="visually-hidden checkbox__flag" type="checkbox" name="amount"><span class="checkbox__custom">
+                                      <svg class="checkbox__custom_active">
+                                        <use xlink:href="./assets/sprite.svg#check"></use>
+                                      </svg></span><span class="checkbox__text"><span>Я согласен с </span><a href="agreement.html">политикой обработки персональных данных</a></span>
+                                  </label>
+                        </div>
+                      </form>
+                    </div>
+                    <picture class="contacts__img-wrap"> 
+                      <source media="(min-width: 991.98px)" srcset="./assets/img/others/contacts-mobile.jpg"><img class="contacts__img" src="./assets/img/others/contacts.jpg" alt="">
+                    </picture>
+                  </div>
+                </section>
+      </div>
+            <footer class="footer">
+              <div class="footer__container container"> 
+                <div class="footer__top"> 
+                  <div class="footer__info"> <a class="footer__logo" href="index.html">
+                      <svg class="footer__logo-icon">
+                        <use xlink:href="./assets/sprite.svg#logo-footer"></use>
+                      </svg></a>
+                    <p class="footer__desc">За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. </p>
+                    <ul class="footer__social"> 
+                      <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">telegram</a></li>
+                      <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">vk</a></li>
+                      <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">instagram</a></li>
+                    </ul>
+                  </div>
+                  <ul class="footer__nav-contact">
+                    <li class="footer__nav-contact-item"><strong class="footer__nav-contact-title">Навигация</strong>
+                            <nav class="nav footer__nav nav_column">
+                              <ul class="nav__list">
+                                <li class="nav__item"> <a class="nav__item" href="about.html">Обо мне</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="cases.html">Кейсы</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="#">Рабочий процесс</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="#">Отзывы</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="#">Спринты</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="#">Разбор резюме</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="#">Бизнес-консалтинг</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="#">Отзывы</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
+                              </ul>
+                            </nav>
+                    </li>
+                    <li class="footer__nav-contact-item"><strong class="footer__nav-contact-title">Контакты</strong>
+                            <div class="nav footer__contacts nav_column">
+                              <ul class="nav__list">
+                                <li class="nav__item"> <a class="nav__item" href="mailto:a_kabuki@gmail.com">a_kabuki@gmail.com</a></li>
+                                <li class="nav__item"> <a class="nav__item" href="tel:+78629642535">+7 862 964 2535</a></li>
+                              </ul>
+                            </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__bottom"><span class="footer__copyright">Все права сохранены © 2022</span><a class="footer__agreement" href="agreement.html">Пользовательское соглашение</a></div>
+              </div>
+            </footer>
+    </div>
+  </body>
+</html>
