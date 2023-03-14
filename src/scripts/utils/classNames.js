@@ -14,8 +14,8 @@ export const classNames = {
   },
   masonry: {
     gridList: {
-      list: 'grid-list',
-      item: 'grid-list__item'
+      list: 'uneven-list',
+      item: 'uneven-list__item'
     }
   }
 };

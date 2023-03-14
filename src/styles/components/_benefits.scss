@@ -46,9 +46,6 @@
   }
 
   &__desc-block {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     max-width: 600px;
     @media (max-width: vars.$lg) {
       max-width: unset;

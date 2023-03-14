@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'Спасибо за заявочку!';
+  - const pageName = 'thanks-page';
+
+block content
+  include ../components/answer
+
+  +answer({
+    title: 'Спасибо за заявочку!',
+    desc: 'Я отпишусь вам в течение одного рабочего дня',
+    src: '@/img/others/thanks.jpg',
+    srcMobile: '@/img/others/thanks-mobile.jpg',
+  })
+  

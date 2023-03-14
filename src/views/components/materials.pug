@@ -1,0 +1,7 @@
+include ../partials/uneven-list
+
+mixin materials(data, title)
+  section.section
+    .container.column
+      h2.title=title
+      +uneven-list(data)

@@ -40,6 +40,12 @@
   max-width: 670px;
 }
 
+.desc-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .text-block {
   display: flex;
   flex-wrap: wrap;

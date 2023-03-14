@@ -1,0 +1,36 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.offer {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: fn.clip(32, 40);
+  max-width: 440px;
+  padding: fn.clip(24, 30) fn.clip(20, 30) fn.clip(32, 36);
+  color: vars.$white;
+  background: vars.$dark;
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip(16, 24);
+  }
+
+  &__title {
+    @include mix.h3;
+  }
+
+  &__bottom {
+    display: flex;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+  }
+
+  &__btn {
+    margin-left: -30px;
+  }
+}

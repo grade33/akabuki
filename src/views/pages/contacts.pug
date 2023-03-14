@@ -1,0 +1,13 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'Контакты';
+  - const pageName = 'contacts-page';
+
+block content
+  include ../components/heroes/hero-contacts
+  include ../components/contacts
+
+  +hero-contacts
+  +contacts
+  

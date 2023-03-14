@@ -1,7 +1,7 @@
-mixin blog(blogList)
+mixin blog(blogList, title)
   section.blog.section
     .blog__container.container.column
-      h2.blog__title.title Интервью, экспертные статьи и комментарии
+      h2.blog__title.title=title
       .slider-full-width.slider-full-width_right.slider-fog.slider-fog_right
         .swiper.blog__slider 
           ul.swiper-wrapper 
@@ -10,6 +10,8 @@ mixin blog(blogList)
                 a.blog__link(href="blog.html") 
                   .blog__img-block
                     picture.blog__img-wrap.wh100
+                      if blog.srcMobile
+                        source(media="(max-width: 991.98px)", srcset=blog.srcMobile)
                       img.blog__img(src=blog.src, alt="")
                     span.blog__date.btn.btn_white=blog.date
                   h3.blog__name=blog.name

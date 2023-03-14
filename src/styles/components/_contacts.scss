@@ -1,0 +1,73 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.contacts {
+  padding: 100px 0;
+
+  &__container {
+    display: flex;
+    gap: fn.clip(48, 65);
+    align-items: flex-start;
+    @media (max-width: vars.$xl) {
+      flex-direction: column;
+      align-items: unset;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip(48, 60);
+    max-width: 680px;
+    padding-right: fn.clip(32, 80);
+    @media (max-width: vars.$xl) {
+      padding-right: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip(48, 50);
+  }
+
+  &__title {
+    @include mix.h2;
+  }
+
+  &__fields-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @media (max-width: vars.$md) {
+      gap: 48px;
+    }
+  }
+
+  &__btn-block {
+    display: flex;
+    gap: fn.clip(48, 60);
+    align-items: center;
+  }
+
+  &__submit {
+    @media (max-width: vars.$md) {
+      order: 2;
+    }
+  }
+
+  &__img {
+    &-wrap {
+      flex-grow: 1;
+      @media (max-width: vars.$xl) {
+        flex-grow: 0;
+      }
+    }
+
+    width: 100%;
+    @media (max-width: vars.$xl) {
+      width: unset;
+    }
+  }
+}

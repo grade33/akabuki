@@ -1,0 +1,57 @@
+extends ../layouts/main
+
+block vars
+  - const title = '5 причин инвестировать в недвижимость в Германии';
+  - const pageName = 'material-item-page';
+
+block content
+  include ../components/heroes/hero-material-item
+  include ../components/materials
+  include ../partials/connect
+  
+
+  +hero-material-item
+  +materials({
+      btn: false,
+      list: [
+        [
+          {
+            src: '@/img/materials/material-1.jpg',
+            srcMobile: '@/img/materials/material-1-mobile.jpg',
+            href: 'material-item.html',
+            date: '2022',
+            name: 'Иммиграция',
+            desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+          },
+          {
+            src: '@/img/materials/material-2.jpg',
+            srcMobile: '@/img/materials/material-2-mobile.jpg',
+            href: 'material-item.html',
+            date: '2022',
+            name: 'Саморазвитие как цель любого предприимчивого человека',
+            desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+          },
+        ],
+        [
+          {
+            src: '@/img/materials/material-4.jpg',
+            srcMobile: '@/img/materials/material-4-mobile.jpg',
+            href: 'material-item.html',
+            date: '2022',
+            name: 'Жизнь после декрета',
+            desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+          },
+          {
+            src: '@/img/materials/material-5.jpg',
+            srcMobile: '@/img/materials/material-5-mobile.jpg',
+            href: 'material-item.html',
+            date: '2022',
+            name: 'Беседа',
+            desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+          },
+        ]
+      ]
+  },
+    'Другие полезные материалы'
+  )
+  +connect

@@ -1,0 +1,43 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.answer {
+  padding: 80px 0;
+  background: vars.$light-bg;
+
+  &__container {
+    display: flex;
+    gap: 60px 20px;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: vars.$xl) {
+      flex-direction: column;
+      align-items: unset;
+      justify-content: unset;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip(40, 60);
+    max-width: 670px;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip(32, 40);
+  }
+
+  &__title {
+    @include mix.h1;
+
+    margin-bottom: 40px;
+  }
+
+  &__img-wrap {
+    flex-grow: 1;
+  }
+}

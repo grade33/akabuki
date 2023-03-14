@@ -1,0 +1,66 @@
+include ../partials/inputs
+
+mixin contacts
+  section.contacts
+    .contacts__container.container
+      .contacts__left
+        h2.contacts__title Заполняйте заявочку
+        form.contacts__form(action="#") 
+          .contacts__fields-block
+            +input({
+              placeholder: 'Имя',
+              name: 'name',
+              type: 'text',
+              isDark: false,
+            }, 'contacts__field')
+            +input({
+              placeholder: 'Компания',
+              name: 'company',
+              type: 'text',
+              isDark: false,
+            }, 'contacts__field')
+            +input({
+              placeholder: 'Телеграм или номер телефона',
+              name: 'contact',
+              type: 'text',
+              isDark: false,
+            }, 'contacts__field')
+            +textarea({
+              placeholder: 'Расскажите кратко о задаче',
+              name: 'message',
+              isDark: false,
+            }, 'contacts__field')
+            +pick({
+              isDark: false,
+              text: 'Бюджет',
+              name: 'amount',
+              list: [
+                {
+                  text: '<10.000€',
+                  value: '<10000',
+                },
+                {
+                  text: '10.000€ - 20.000€',
+                  value: '10000-20000',
+                },
+                {
+                  text: '20.000€ - 50.000€',
+                  value: '20000-50000',
+                },
+                {
+                  text: '>50.000€',
+                  value: '>50000',
+                },
+              ],
+            }, 'contacts__field')
+          .contacts__btn-block
+            button.btn.btn_circle.contacts__submit(type="submit") Отправить
+            +checkbox({
+              isDark: false,
+              name: 'amount'
+            }, 'contacts__checkbox')
+              span Я согласен с 
+              a(href="agreement.html") политикой обработки персональных данных
+      picture.contacts__img-wrap 
+        source(media="(min-width: 991.98px)" srcset="@/img/others/contacts-mobile.jpg")
+        img.contacts__img(src="@/img/others/contacts.jpg" alt="")

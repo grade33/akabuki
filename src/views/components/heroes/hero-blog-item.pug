@@ -1,0 +1,76 @@
+include ../../partials/buttons
+include ../../partials/poster
+include ../../partials/article
+include ../../partials/offer 
+
+mixin hero-blog-item
+  section.hero.hero_item
+    .hero__container.container
+      .hero__text-block
+        .hero__title-block 
+          +link-arrow({
+            href: 'blog.html',
+            isLeft: true,
+            isDark: false,
+            isArrow: true
+          },)
+          h1.hero__title.hero__title_small Методология SCRUM в Битрикс24 и digital-индустрии
+        .btn.btn_white 21 Декабря 2022
+      +poster({
+        src: '@/img/blog/item/poster.jpg',
+        srcMobile: '@/img/blog/item/poster-mobile.jpg',
+      })
+      .hero__content
+        +article([
+          {
+            bigTitle: 'Сложности и особенности проекта',
+            descList: [
+              'В коде сайта «переломана» логика. В результате, решение любой задачи занимает в 2-3 раза больше времени программиста и контент-менеджера. А посетителям сложно понять куда они попали и какие действия требуется совершить для оформления заказа.',
+            ],
+          },
+          {
+            middleTitle: 'Клиент',
+            descList: [
+              'Компания «Ариэль Металл» — один из 10 крупнейших поставщиков черного металлопроката и труб в РФ с 30 летней историей, складами в Москве, Санкт-Петербурге, Самаре и Батайске.. Одиночество на пути к развитию: ТОП-5 предпринимателей, которые справились.',
+              'В коде сайта «переломана» логика. В результате, решение любой задачи занимает в 2-3 раза больше времени программиста и контент-менеджера. А посетителям сложно понять куда они попали и какие действия требуется совершить для оформления заказа.',
+            ],
+          },
+          {
+            smallTitle: 'У заказчика был красивый сайт с техническими проблемами и проблемами usability:',
+            descList: [
+              'В коде сайта «переломана» логика. В результате, решение любой задачи занимает в 2-3 раза больше времени программиста и контент-менеджера. А посетителям сложно понять куда они попали и какие действия требуется совершить для оформления заказа.',
+            ],
+          },
+          {
+            smallTitle: 'До начала работ у сайта конверсия была близка к нулю.',
+            descList: [
+              'При этом, у заказчика отсутствовала аналитика и почту никто не отслеживал, а ведь для В2В конверсии через email сотавляют до 70%.',
+            ],
+          },
+          {
+            imgBlock: {
+              src: '@/img/blog/article/article-1.jpg',
+              srcMobile: '@/img/blog/article/article-mobile-1.jpg',
+              figcaption: {
+                text1: 'Economics by Andrew Bratuhin via',
+                underline: 'Shutterstock',
+                text2: '',
+              },
+            },
+          },
+          {
+            bigTitle: 'Заключение',
+            descList: [
+              'The voice is used more and more in SILK interfaces — Speech, Image, Language, Knowledge. Maybe someday we’ll see neurointerfaces that transmit data between neurons and machines through implants. It’s unlikely that we’ll see the end of GUI anytime soon — but technology keeps on moving forward, and when technology gets advanced and available enough, it usually sweeps its predecessor from the map.',
+              'What do you think we’ll see in ten years, twenty, hundred? Will it be smartphones, will we even have screens at all?',
+            ],
+          },
+          {
+            bigTitle: 'Are you sure?',
+            descList: [
+              'Компания «Ариэль Металл» — один из 10 крупнейших поставщиков черного металлопроката и труб в РФ с 30 летней историей, складами в Москве, Санкт-Петербурге, Самаре и Батайске.. Одиночество на пути к развитию: ТОП-5 предпринимателей, которые справились. ',
+              'В коде сайта «переломана» логика. В результате, решение любой задачи занимает в 2-3 раза больше времени программиста и контент-менеджера. А посетителям сложно понять куда они попали и какие действия требуется совершить для оформления заказа.',
+            ],
+          },
+        ])
+        +offer('hero__offer hero__offer_first')

@@ -1,0 +1,70 @@
+include ../../partials/normal-list
+
+mixin hero-blog
+  section.hero-blog.hero
+    .hero-blog__container.hero__container.container
+      .hero__text-block
+        h1.hero-blog__title.hero__title Бложек
+        p.hero__desc Бизнес-консультант — часто становится «спасательным кругом» для предпринимателя малого или среднего бизнеса
+      +normal-list({
+        btn: 'Загрузить ещё',
+        list: [
+          {
+            src: '@/img/blog/blog-1.jpg',
+            srcMobile: '@/img/blog/blog-mobile-1.jpg',
+            href: 'blog-item.html',
+            date: '21 Декабря 2022',
+            name: 'Методология SCRUM в Битрикс24 и digital-индустрии',
+          },
+          {
+            src: '@/img/blog/blog-2.jpg',
+            srcMobile: '@/img/blog/blog-mobile-2.jpg',
+            href: 'blog-item.html',
+            date: '21 Декабря 2022',
+            name: 'Успей открыть свой бизнес пока другие в панике бегут с рынка',
+          },
+          {
+            src: '@/img/blog/blog-3.jpg',
+            srcMobile: '@/img/blog/blog-mobile-3.jpg',
+            href: 'blog-item.html',
+            date: '21 Декабря 2022',
+            name: 'Методология SCRUM в Битрикс24 и digital-индустрии',
+          },
+          {
+            src: '@/img/blog/blog-4.jpg',
+            srcMobile: '@/img/blog/blog-mobile-4.jpg',
+            href: 'blog-item.html',
+            date: '21 Декабря 2022',
+            name: 'Одиночество на пути к развитию: ТОП-5 предпринимателей, которые справились',
+          },
+          {
+            src: '@/img/blog/blog-5.jpg',
+            srcMobile: '@/img/blog/blog-mobile-5.jpg',
+            href: 'blog-item.html',
+            date: '21 Декабря 2022',
+            name: 'Итогои 2022 года в диджитал',
+          },
+          {
+            src: '@/img/blog/blog-6.jpg',
+            srcMobile: '@/img/blog/blog-mobile-6.jpg',
+            href: 'blog-item.html',
+            date: '21 Декабря 2022',
+            name: 'Фото и видео-продакшн как помощники в продвижении бизнеса',
+          },
+            {
+            src: '@/img/blog/blog-7.jpg',
+            srcMobile: '@/img/blog/blog-mobile-6.jpg',
+            href: 'blog-item.html',
+            date: '21 Декабря 2022',
+            name: 'Методология SCRUM в Битрикс24 и digital-индустрии',
+          },
+            {
+            src: '@/img/blog/blog-8.jpg',
+            srcMobile: '@/img/blog/blog-mobile-6.jpg',
+            href: 'blog-item.html',
+            date: '21 Декабря 2022',
+            name: 'Отдыхаем с кайфом: лучшие места для визита в Европе',
+          },
+        ]
+      })
+    

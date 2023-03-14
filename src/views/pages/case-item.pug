@@ -1,0 +1,13 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'SEO-поддержка и бизнес-консультация ТОИР-М';
+  - const pageName = 'case-item-page';
+
+block content
+  include ../components/heroes/hero-case-item
+  include ../partials/connect
+
+  +hero-case-item
+  +connect
+  

@@ -1,0 +1,27 @@
+mixin uneven-list(data)
+  .uneven-list
+    .uneven-list__list
+      each list in data.list
+        .uneven-list__block
+          each item, idx in list
+            a.uneven-list__item(href=item.href class=idx===0 ? 'uneven-list__item_first' : '')
+              .uneven-list__img-block
+                picture.uneven-list__img-wrap.wh100
+                  source(media="(max-width: 991.98px)", srcset=item.srcMobile)
+                  img.uneven-list__img(src=item.src, alt="")
+                if item.date
+                  .uneven-list__date.btn.btn_white=item.date
+              .uneven-list__text-block 
+                h3.uneven-list__name=item.name
+                if item.desc
+                  p.uneven-list__desc=item.desc
+              if item.btnList
+                .uneven-list__btn-wrap
+                  each text, idx in item.btnList
+                    if idx % 2 === 0
+                      .btn.btn_dark=text 
+                    else
+                      .btn.btn_green=text
+    if data.btn
+      button.uneven-list__more.btn.btn_circle(type="button")=data.btn
+

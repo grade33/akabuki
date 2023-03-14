@@ -3,25 +3,25 @@ include ../../partials/poster
 include ../../partials/info
 
 mixin hero-service-item
-  section.hero-service-item.hero
-    .hero-service-item__container.hero__container.container
-      .hero-service-item__text-block.hero__text-block
-        .hero-service-item__title-block 
+  section.hero.hero_item
+    .hero__container.container
+      .block.hero__text-block
+        .hero__title-block 
           +link-arrow({
             href: 'services.html',
             isLeft: true,
             isDark: false,
             isArrow: true
-          }, 'hero-service-item__back')
-          h1.hero-service-item__title.hero__title.hero__title_small Анализ бизнеса
-        p.hero-service-item__desc.hero__desc Бизнес-консультант — часто становится «спасательным кругом» для предпринимателя малого или среднего бизнеса
+          },)
+          h1.hero__title.hero__title_small Анализ бизнеса
+        p.hero__desc Бизнес-консультант — часто становится «спасательным кругом» для предпринимателя малого или среднего бизнеса
       +poster({
-        srcMobile: '@/img/heroes/service-item/poster-mobile.jpg',
-        src: '@/img/heroes/service-item/poster.jpg',
+        srcMobile: '@/img/services/item/poster-mobile-1.jpg',
+        src: '@/img/services/item/poster-1.jpg',
       })
       +info({
         top: true,
-        src: '@/img/heroes/service-item/info.jpg',
+        src: '@/img/services/item/preview.jpg',
         title: 'Моя миссия - вернуть веру в индивидуальных экспертов.',
         desc: 'За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. При этом соблюдали обновленный брендбук и выбирали лучшие решения, которые упрощали жизнь пользователей.',
         list: [

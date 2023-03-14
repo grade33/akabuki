@@ -17,13 +17,16 @@
 @use './partials/slider';
 @use './partials/connect';
 @use './partials/poster';
-@use './partials/grid-list';
+@use './partials/uneven-list';
+@use './partials/normal-list';
+@use './partials/article';
+@use './partials/offer';
 
 //  Layouts
 @use './components/heroes/hero';
 @use './components/heroes/hero-home';
 @use './components/heroes/hero-services';
-@use './components/heroes/hero-service-item';
+@use './components/heroes/hero-contacts';
 @use './components/header';
 @use './components/footer';
 @use './components/services';
@@ -35,6 +38,8 @@
 @use './components/principles';
 @use './components/application';
 @use './components/benefits';
+@use './components/answer';
+@use './components/contacts';
 
 //  Pages
 @use './pages/service-item';

@@ -1,0 +1,66 @@
+include ../../partials/uneven-list
+
+mixin hero-materials
+  section.hero-materials.hero
+    .hero-materials__container.hero__container.container
+      .hero__text-block
+        h1.hero-materials__title.hero__title Материалы
+        p.hero__desc Бизнес-консультант — часто становится «спасательным кругом» для предпринимателя малого или среднего бизнеса
+      +uneven-list({
+        btn: 'Больше',
+        list: [
+          [
+            {
+              src: '@/img/materials/material-1.jpg',
+              srcMobile: '@/img/materials/material-mobile-1.jpg',
+              href: 'material-item.html',
+              date: '2022',
+              name: 'Иммиграция',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+            },
+            {
+              src: '@/img/materials/material-2.jpg',
+              srcMobile: '@/img/materials/material-mobile-2.jpg',
+              href: 'material-item.html',
+              date: '2022',
+              name: 'Саморазвитие как цель любого предприимчивого человека',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+            },
+            {
+              src: '@/img/materials/material-3.jpg',
+              srcMobile: '@/img/materials/material-mobile-3.jpg',
+              href: 'material-item.html',
+              date: '2022',
+              name: 'Образование',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+            },
+          ],
+          [
+            {
+              src: '@/img/materials/material-4.jpg',
+              srcMobile: '@/img/materials/material-mobile-4.jpg',
+              href: 'material-item.html',
+              date: '2022',
+              name: 'Жизнь после декрета',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+            },
+            {
+              src: '@/img/materials/material-5.jpg',
+              srcMobile: '@/img/materials/material-mobile-5.jpg',
+              href: 'material-item.html',
+              date: '2022',
+              name: 'Беседа',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+            },
+            {
+              src: '@/img/materials/material-6.jpg',
+              srcMobile: '@/img/materials/material-mobile-6.jpg',
+              href: 'material-item.html',
+              date: '2022',
+              name: 'Фантастичность',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+            },
+          ]
+        ]
+      })
+    

@@ -1,79 +1,88 @@
-include ../../partials/grid-list
+include ../../partials/uneven-list
 
 mixin hero-cases
   section.hero-cases.hero
     .hero-cases__container.hero__container.container
       h1.hero-cases__title.hero__title Кейсы
-      +grid-list([
-        {
-          src: '@/img/heroes/cases/cases-1.jpg',
-          srcMobile: '@/img/heroes/cases/cases-1-mobile.jpg',
-          href: 'case-item.html',
-          name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто',
-          desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
-          btnList: [
-            '+150% заявок',
-            '+500% посетителей',
+      +uneven-list({
+        btn: false,
+        list: [
+          [
+            {
+              src: '@/img/cases/case-1.jpg',
+              srcMobile: '@/img/cases/case-1-mobile.jpg',
+              href: 'case-item.html',
+              date: '2021',
+              name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+              btnList: [
+                '+150% заявок',
+                '+500% посетителей',
+              ],
+            },
+            {
+              src: '@/img/cases/case-2.jpg',
+              srcMobile: '@/img/cases/case-2-mobile.jpg',
+              href: 'case-item.html',
+              date: '2021',
+              name: 'Аналитика воронок продаж бренда KFP',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+              btnList: [
+                '+150% заявок',
+                '+500% посетителей',
+              ],
+            },
+                    {
+              src: '@/img/cases/case-3.jpg',
+              srcMobile: '@/img/cases/case-3-mobile.jpg',
+              href: 'case-item.html',
+              date: '2021',
+              name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+              btnList: [
+                '+150% заявок',
+                '+500% посетителей',
+              ],
+            },
           ],
-        },
-        {
-          src: '@/img/heroes/cases/cases-2.jpg',
-          srcMobile: '@/img/heroes/cases/cases-2-mobile.jpg',
-          href: 'case-item.html',
-          name: 'SEO-поддержка и бизнес-консультация ТОИР-М',
-          desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
-          btnList: [
-            '+150% заявок',
-            '+500% посетителей',
-          ],
-        },
-        {
-          src: '@/img/heroes/cases/cases-3.jpg',
-          srcMobile: '@/img/heroes/cases/cases-3-mobile.jpg',
-          href: 'case-item.html',
-          date: '2021',
-          name: 'Аналитика воронок продаж бренда KFP',
-          desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
-          btnList: [
-            '+150% заявок',
-            '+500% посетителей',
-          ],
-        },
-        {
-          src: '@/img/heroes/cases/cases-4.jpg',
-          srcMobile: '@/img/heroes/cases/cases-4-mobile.jpg',
-          href: 'case-item.html',
-          date: '2021',
-          name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто',
-          desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
-          btnList: [
-            '+150% заявок',
-            '+500% посетителей',
-          ],
-        },
-        {
-          src: '@/img/heroes/cases/cases-5.jpg',
-          srcMobile: '@/img/heroes/cases/cases-5-mobile.jpg',
-          href: 'case-item.html',
-          date: '2021',
-          name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто',
-          desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
-          btnList: [
-            '+150% заявок',
-            '+500% посетителей',
-          ],
-        },
-        {
-          src: '@/img/heroes/cases/cases-6.jpg',
-          srcMobile: '@/img/heroes/cases/cases-6-mobile.jpg',
-          href: 'case-item.html',
-          date: '2021',
-          name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто',
-          desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
-          btnList: [
-            '+150% заявок',
-            '+500% посетителей',
-          ],
-        },
-      ])
+          [
+            {
+              src: '@/img/cases/case-4.jpg',
+              srcMobile: '@/img/cases/case-4-mobile.jpg',
+              href: 'case-item.html',
+              date: '2021',
+              name: 'SEO-поддержка и бизнес-консультация ТОИР-М',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+              btnList: [
+                '+150% заявок',
+                '+500% посетителей',
+              ],
+            },
+            {
+              src: '@/img/cases/case-5.jpg',
+              srcMobile: '@/img/cases/case-5-mobile.jpg',
+              href: 'case-item.html',
+              date: '2021',
+              name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+              btnList: [
+                '+150% заявок',
+                '+500% посетителей',
+              ],
+            },
+            {
+              src: '@/img/cases/case-6.jpg',
+              srcMobile: '@/img/cases/case-6-mobile.jpg',
+              href: 'case-item.html',
+              date: '2021',
+              name: 'Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто',
+              desc: 'Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль.',
+              btnList: [
+                '+150% заявок',
+                '+500% посетителей',
+              ],
+            },
+          ]
+        ]
+      })
     

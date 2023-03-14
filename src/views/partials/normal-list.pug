@@ -1,0 +1,16 @@
+mixin normal-list(data)
+  .normal-list
+    ul.normal-list__list
+      each item in data.list
+        a.normal-list__item(href=item.href)
+          .normal-list__img-block
+            picture.normal-list__img-wrap.wh100
+              if item.srcMobile
+                source(media="(max-width: 991.98px)", srcset=item.srcMobile)
+              img.normal-list__img(src=item.src, alt="")
+            if item.date
+              .normal-list__date.btn.btn_white=item.date
+          h3.normal-list__name=item.name
+    if data.btn
+      button.normal-list__more.btn.btn_circle(type="button")=data.btn
+

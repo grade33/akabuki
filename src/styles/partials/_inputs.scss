@@ -82,8 +82,67 @@ textarea {
     }
   }
 
-  a, span {
+  a,
+  span {
     display: inline;
     text-decoration: underline;
+  }
+}
+
+.pick {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: vars.$dark;
+
+  &_dark {
+    color: vars.$white;
+
+    .pick {
+      &__custom {
+        border-color: vars.$white;
+      }
+
+      &__flag:checked + .pick__custom {
+        color: vars.$dark;
+        background: vars.$white;
+      }
+    }
+  }
+
+  &__text {
+    color: vars.$gray-text;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    @include mix.p16;
+  }
+
+  &__radio {
+    cursor: pointer;
+  }
+
+  &__custom {
+    display: inline-block;
+    padding: 10px 14px;
+    font-family: Inter, sans-serif;
+    border: 1px solid vars.$dark;
+    border-radius: 46px;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+  }
+
+  &__flag {
+    flex: none;
+
+    &:checked {
+      & + .pick__custom {
+        color: vars.$white;
+        background: vars.$dark;
+      }
+    }
   }
 }

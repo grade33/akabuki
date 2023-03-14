@@ -1,0 +1,62 @@
+mixin article(data)
+  article.article
+    each item in data 
+      .article__item(class=item.smallTitle ? 'article__item_small' : '')
+        if item.bigTitle
+          h2.article__title-big=item.bigTitle
+        if item.middleTitle 
+          h3.article__title-middle=item.middleTitle
+        if item.smallTitle 
+          h4.article__title-small=item.smallTitle
+        if item.descList 
+          .desc-block
+            each desc in item.descList
+              p.article__desc=desc 
+        if item.imgBlock 
+          figure.article__figure 
+            picture.article__figure-img-wrap
+              source(media="(max-width: 767.98px)", srcset=item.imgBlock.srcMobile)
+              img.article__figure-img(src=item.imgBlock.src alt="")
+            if typeof(item.imgBlock.figcaption) === 'string'
+              figcaption.article__figure-figcaption=item.imgBlock.figcaption
+            else
+              figcaption.article__figure-figcaption
+                =item.imgBlock.figcaption.text1
+                span.article__figure-figcaption_underline(href="#")=item.imgBlock.figcaption.link
+                =item.imgBlock.figcaption.text2
+
+mixin article-2(data)
+  article.article-2
+    each block in data 
+      .article-2__block
+        if block.bigTitle
+          h2.article-2__title-big=block.bigTitle
+        if block.middleTitle
+          h3.article-2__title-middle.article-2__title-middle_outer=block.middleTitle
+        if block.items 
+          each item in block.items
+            .article-2__item  
+              if item.middleTitle
+                h3.article-2__title-middle=item.middleTitle
+              if item.smallTitle
+                h4.article-2__title-small=item.smallTitle
+              if item.descList
+                .desc-block
+                  each desc in item.descList
+                    p=desc
+              if item.descNewLine
+                div
+                  each desc in item.descNewLine
+                    p=desc
+              if item.imgBlock
+                figure.article-2__figure 
+                  picture.article-2__figure-img-wrap
+                    source(media="(max-width: 767.98px)", srcset=item.imgBlock.srcMobile)
+                    img.article-2__figure-img(src=item.imgBlock.src alt="")
+                  if item.imgBlock.figcaption
+                    figcaption.article-2__figure-figcaption=item.imgBlock.figcaption
+        if block.list 
+          ol.article-2__list
+            each title in block.list
+              li.article-2__list-item 
+                strong.article-2__list-title=title

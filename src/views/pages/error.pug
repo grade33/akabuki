@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'Страницы не существует';
+  - const pageName = 'error-page';
+
+block content
+  include ../components/answer
+
+  +answer({
+    title: 'Страницы не существует',
+    desc: 'Я отпишусь вам в течение одного рабочего дня',
+    src: '@/img/others/error.jpg',
+    srcMobile: '@/img/others/error-mobile.jpg',
+  })
+  

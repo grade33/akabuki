@@ -6,6 +6,10 @@
   padding: fn.clip(60, 80) 0 fn.clip(60, 100);
   background: vars.$light-bg;
 
+  &_item {
+    padding-top: fn.clip(32, 80);
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -18,6 +22,25 @@
     gap: fn.clip(32, 60);
   }
 
+  &__title-block {
+    @media (max-width: vars.$lg) {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .btn-arrow {
+      float: left;
+      margin-top: 18px;
+      margin-right: 32px;
+      margin-bottom: 18px;
+      @media (max-width: vars.$lg) {
+        float: unset;
+        margin: 0;
+      }
+    }
+  }
+
   &__title {
     @include mix.h1;
 
@@ -28,9 +51,45 @@
     }
   }
 
+  &__desc-block {
+    max-width: 900px;
+
+    p {
+      max-width: unset;
+    }
+  }
+
   &__desc {
     @include mix.p24;
 
     max-width: 670px;
+  }
+
+  &__btn-block {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__content {
+    display: flex;
+    gap: fn.clip(60, 70);
+    align-items: flex-start;
+    @media (max-width: vars.$xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__offer {
+    &_first {
+      @media (max-width: vars.$xl) {
+        order: -1;
+      }
+    }
+
+    &_none {
+      @media (max-width: vars.$xl) {
+        display: none;
+      }
+    }
   }
 }

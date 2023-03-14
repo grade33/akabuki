@@ -4,7 +4,7 @@ mixin principles(principlesList)
   section.principles.section
     .principles__container.container.column
       h2.principles__title.title Принципы, которых я придерживаюсь в работе с клиентами
-      ul.principles__list
+      ol.principles__list
         each principle in principlesList
           li.principles__item 
             .principles__head
@@ -15,10 +15,10 @@ mixin principles(principlesList)
                   picture.principles__icon-wrap
                     img.principles__icon(src=principle.src, alt="")
             .principles__body
-              .principles__desc-block
+              .principles__desc-block.desc-block
                 each desc in principle.descList
                   p.principles__desc=desc
-      ul.principles__list-mobile
+      ol.principles__list-mobile
         each principle, idx in principlesList
           li.principles__item
             .principles__head(data-hc-control=idx)
@@ -43,6 +43,6 @@ mixin principles(principlesList)
                 isDark: false,
                 isChevron: true
               }, 'principles__acc-btn')
-              .principles__desc-block
+              .principles__desc-block.desc-block
                 each desc in principle.descList
                   p.principles__desc=desc

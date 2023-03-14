@@ -1,0 +1,11 @@
+mixin answer(data)
+  section.answer
+    .answer__container.container
+      .answer__left
+        .answer__text-block
+          h1.answer__title=data.title
+          p.answer__desc=data.desc
+        a.answer__btn.btn.btn_circle(href="index.html") На главную
+      picture.answer__img-wrap 
+        source(media="(max-width: 991.98px)", srcset=data.srcMobile)
+        img.answer__img(src=data.src, alt="")
