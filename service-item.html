@@ -10,39 +10,111 @@
   </head>
   <body>
     <div class="app service-item-page">
-            <header class="header">
-              <div class="header__container container"><a class="header__logo" href="index.html">
-                  <svg class="header__logo-icon">
-                    <use xlink:href="./assets/sprite.svg#logo-header"></use>
-                  </svg></a>
-                <div class="header__content">
-                        <nav class="nav header__nav nav_row">
-                          <ul class="nav__list">
-                            <li class="nav__item"> <a class="nav__item" href="about.html">Обо мне</a></li>
-                            <li class="nav__item"> <a class="nav__item" href="services.html">Услуги</a></li>
-                            <li class="nav__item"> <a class="nav__item" href="cases.html">Кейсы</a></li>
-                            <li class="nav__item"> <a class="nav__item" href="materials.html">Полезные материалы</a></li>
-                            <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
-                            <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
-                          </ul>
-                        </nav>
-                        <div class="select lang header__lang">
-                          <div class="select__custom">
-                            <button class="select__head" type="button"> </button>
-                            <div class="select__body"> 
-                              <button class="select__option"><span class="select__item">Ам</span></button>
-                              <button class="select__option is-selected"><span class="select__item">Ру</span></button>
-                              <button class="select__option"><span class="select__item">Ан</span></button>
-                            </div>
-                          </div>
-                        </div>
-                  <button class="header__apply btn btn_dark" type="button">Заявка</button>
-                </div>
-                <div class="header__bar">
-                  <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
-                </div>
+      <div class="popup">
+        <div class="popup__window container" data-popup="contact">
+          <div class="container popup__container">
+            <div class="popup__content"> 
+              <div class="popup__top">
+                <div class="popup__link-block"> <a class="popup__link btn btn_white" href="https://t.me/anastasia_kabuki">Написать в Telegram</a><a class="popup__link btn btn_trs-white" href="hello@akabuki.pro">hello@akabuki.pro</a></div>
+                <button class="popup__close close" type="button" data-popup-close="data-popup-close">
+                  <svg class="close__icon">
+                    <use xlink:href="./assets/sprite.svg#close"></use>
+                  </svg>
+                </button>
               </div>
-            </header>
+              <div class="popup__bottom"> 
+                <form class="popup__form" action="#"> 
+                  <div class="popup__fields-block">
+                    <div class="popup__field">
+                      <label class="visually-hidden" for="name"> </label>
+                      <input class="input" id="name" placeholder="Имя" name="name" type="text"/>
+                    </div>
+                    <div class="popup__field">
+                      <label class="visually-hidden" for="company"> </label>
+                      <input class="input" id="company" placeholder="Компания" name="company" type="text"/>
+                    </div>
+                    <div class="popup__field">
+                      <label class="visually-hidden" for="contact"> </label>
+                      <input class="input" id="contact" placeholder="Телеграм или номер телефона" name="contact" type="text"/>
+                    </div>
+                    <div class="popup__field">
+                      <label class="visually-hidden" for="message"> </label>
+                      <textarea class="input" id="message" rows="1" placeholder="Расскажите кратко о задаче" name="message"></textarea>
+                    </div>
+                  </div>
+                  <div class="popup__form-btn-block">
+                    <label class="checkbox  popup__checkbox">
+                      <input class="visually-hidden checkbox__flag" type="checkbox" name="amount"/><span class="checkbox__custom">
+                        <svg class="checkbox__custom_active">
+                          <use xlink:href="./assets/sprite.svg#check"></use>
+                        </svg></span><span class="checkbox__text"><span>Я согласен с </span><a href="agreement.html">политикой обработки персональных данных</a></span>
+                    </label>
+                    <button class="btn btn_circle popup__submit" type="submit">Отправить</button>
+                  </div>
+                </form>
+                <picture class="popup__img-wrap"> <img class="popup__img" src="./assets/img/others/popup.jpg" alt=""/></picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu__container container">
+          <div class="menu__top">
+            <div class="menu__btn-block">
+              <select class="select lang lang_big lang_light">
+                <option value="AM">AM</option>
+                <option value="RU">RU</option>
+                <option value="EN">EN</option>
+              </select>
+              <button class="menu__bid btn btn_white" type="button" data-popup-open="contact">Заявка</button>
+            </div>
+            <button class="menu__close close" type="button">
+              <svg class="close__icon">
+                <use xlink:href="./assets/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list"> 
+              <li class="menu__nav-item"><a class="menu__nav-link" href="./about.html">Обо мне</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="./services.html">Услуги</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="./cases.html">Кейсы</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="./meterials.html">Полезные материалы</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="./blog.html">Блог</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="./contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <header class="header">
+        <div class="header__container container"><a class="header__logo" href="index.html">
+            <svg class="header__logo-icon">
+              <use xlink:href="./assets/sprite.svg#logo-header"></use>
+            </svg></a>
+          <div class="header__content">
+            <nav class="nav header__nav nav_row">
+              <ul class="nav__list">
+                <li class="nav__item"> <a class="nav__item" href="about.html">Обо мне</a></li>
+                <li class="nav__item"> <a class="nav__item" href="services.html">Услуги</a></li>
+                <li class="nav__item"> <a class="nav__item" href="cases.html">Кейсы</a></li>
+                <li class="nav__item"> <a class="nav__item" href="materials.html">Полезные материалы</a></li>
+                <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
+                <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+            <select class="select header__lang lang">
+              <option value="Ам">Ам</option>
+              <option value="Ру">Ру</option>
+              <option value="Ан">Ан</option>
+            </select>
+            <button class="header__bid btn btn_dark" type="button" data-popup-open="contact">Заявка</button>
+          </div>
+          <div class="header__bar">
+            <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
+          </div>
+        </div>
+      </header>
       <div class="main">
                 <section class="hero hero_item">
                   <div class="hero__container container">
@@ -171,60 +243,60 @@
                     </div>
                   </div>
                 </section>
-                <section class="link-list section">
-                  <div class="link-list__container container column">
-                    <h2 class="link-list__title title">Мой опыт представлен в следующих кейсах</h2>
-                    <ul class="link-list__list">
-                      <li class="link-list__item"> <a class="link-list__link" href="cases.html">
-                          <div class="link-list__left">
-                            <h3 class="link-list__name">Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто</h3>
-                            <div class="link-list__info-block">
-                              <div class="link-list__info btn btn_dark">+150% заявок</div>
-                              <div class="link-list__info btn btn_dark">+500% посетителей</div>
+                <section class="cases section">
+                  <div class="cases__container container column">
+                    <h2 class="cases__title title">Мой опыт представлен в следующих кейсах</h2>
+                    <ul class="cases__list">
+                      <li class="cases__item"> <a class="cases__link" href="cases.html">
+                          <div class="cases__left">
+                            <h3 class="cases__name">Методика «Бизнес молодости» для контекста в b2b на примере стендов для сто</h3>
+                            <div class="cases__info-block">
+                              <div class="cases__info btn btn_dark">+150% заявок</div>
+                              <div class="cases__info btn btn_dark">+500% посетителей</div>
                             </div>
                           </div>
-                          <div class="link-list__right"> 
-                            <p class="link-list__desc">Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. </p>
-                                    <button class="btn-arrow btn-arrow_light link-list__btn" type="button"> 
+                          <div class="cases__right"> 
+                            <p class="cases__desc">Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. </p>
+                                    <button class="btn-arrow btn-arrow_light cases__btn" type="button"> 
                                       <svg class="btn-arrow__icon btn-arrow__icon_arrow btn-arrow__icon_right">
                                         <use xlink:href="./assets/sprite.svg#arrow-right"></use>
                                       </svg>
                                     </button>
                           </div></a></li>
-                      <li class="link-list__item"> <a class="link-list__link" href="cases.html">
-                          <div class="link-list__left">
-                            <h3 class="link-list__name">SEO-поддержка и бизнес-консультация ТОИР-М</h3>
-                            <div class="link-list__info-block">
-                              <div class="link-list__info btn btn_dark">+150% заявок</div>
-                              <div class="link-list__info btn btn_dark">+500% посетителей</div>
+                      <li class="cases__item"> <a class="cases__link" href="cases.html">
+                          <div class="cases__left">
+                            <h3 class="cases__name">SEO-поддержка и бизнес-консультация ТОИР-М</h3>
+                            <div class="cases__info-block">
+                              <div class="cases__info btn btn_dark">+150% заявок</div>
+                              <div class="cases__info btn btn_dark">+500% посетителей</div>
                             </div>
                           </div>
-                          <div class="link-list__right"> 
-                            <p class="link-list__desc">Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. </p>
-                                    <button class="btn-arrow btn-arrow_light link-list__btn" type="button"> 
+                          <div class="cases__right"> 
+                            <p class="cases__desc">Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. </p>
+                                    <button class="btn-arrow btn-arrow_light cases__btn" type="button"> 
                                       <svg class="btn-arrow__icon btn-arrow__icon_arrow btn-arrow__icon_right">
                                         <use xlink:href="./assets/sprite.svg#arrow-right"></use>
                                       </svg>
                                     </button>
                           </div></a></li>
-                      <li class="link-list__item"> <a class="link-list__link" href="cases.html">
-                          <div class="link-list__left">
-                            <h3 class="link-list__name">Аналитика воронок продаж бренда KFP</h3>
-                            <div class="link-list__info-block">
-                              <div class="link-list__info btn btn_dark">+150% заявок</div>
-                              <div class="link-list__info btn btn_dark">+500% посетителей</div>
+                      <li class="cases__item"> <a class="cases__link" href="cases.html">
+                          <div class="cases__left">
+                            <h3 class="cases__name">Аналитика воронок продаж бренда KFP</h3>
+                            <div class="cases__info-block">
+                              <div class="cases__info btn btn_dark">+150% заявок</div>
+                              <div class="cases__info btn btn_dark">+500% посетителей</div>
                             </div>
                           </div>
-                          <div class="link-list__right"> 
-                            <p class="link-list__desc">Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. </p>
-                                    <button class="btn-arrow btn-arrow_light link-list__btn" type="button"> 
+                          <div class="cases__right"> 
+                            <p class="cases__desc">Построим математическую модель продвижения, с помощью которой спрогнозируем бюджет и прибыль. </p>
+                                    <button class="btn-arrow btn-arrow_light cases__btn" type="button"> 
                                       <svg class="btn-arrow__icon btn-arrow__icon_arrow btn-arrow__icon_right">
                                         <use xlink:href="./assets/sprite.svg#arrow-right"></use>
                                       </svg>
                                     </button>
                           </div></a></li>
                     </ul>
-                    <button class="link-list__more btn btn_circle" type="button">Все кейсы</button>
+                    <button class="cases__more btn btn_circle" type="button">Все кейсы</button>
                   </div>
                 </section>
                 <section class="reviews section">
@@ -365,52 +437,52 @@
                   </div>
                 </section>
       </div>
-            <footer class="footer">
-              <div class="footer__container container"> 
-                <div class="footer__top"> 
-                  <div class="footer__info"> <a class="footer__logo" href="index.html">
-                      <svg class="footer__logo-icon">
-                        <use xlink:href="./assets/sprite.svg#logo-footer"></use>
-                      </svg></a>
-                    <p class="footer__desc">За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. </p>
-                    <ul class="footer__social"> 
-                      <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">telegram</a></li>
-                      <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">vk</a></li>
-                      <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">instagram</a></li>
-                    </ul>
-                  </div>
-                  <ul class="footer__nav-contact">
-                    <li class="footer__nav-contact-item"><strong class="footer__nav-contact-title">Навигация</strong>
-                            <nav class="nav footer__nav nav_column">
-                              <ul class="nav__list">
-                                <li class="nav__item"> <a class="nav__item" href="about.html">Обо мне</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="cases.html">Кейсы</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="#">Рабочий процесс</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="#">Отзывы</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="#">Спринты</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="#">Разбор резюме</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="#">Бизнес-консалтинг</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="#">Отзывы</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
-                              </ul>
-                            </nav>
-                    </li>
-                    <li class="footer__nav-contact-item"><strong class="footer__nav-contact-title">Контакты</strong>
-                            <div class="nav footer__contacts nav_column">
-                              <ul class="nav__list">
-                                <li class="nav__item"> <a class="nav__item" href="mailto:a_kabuki@gmail.com">a_kabuki@gmail.com</a></li>
-                                <li class="nav__item"> <a class="nav__item" href="tel:+78629642535">+7 862 964 2535</a></li>
-                              </ul>
-                            </div>
-                    </li>
+      <footer class="footer">
+        <div class="footer__container container"> 
+          <div class="footer__top"> 
+            <div class="footer__info"> <a class="footer__logo" href="index.html">
+                <svg class="footer__logo-icon">
+                  <use xlink:href="./assets/sprite.svg#logo-footer"></use>
+                </svg></a>
+              <p class="footer__desc">За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. </p>
+              <ul class="footer__social"> 
+                <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">telegram</a></li>
+                <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">vk</a></li>
+                <li class="footer__social-item"> <a class="footer__social-link btn btn_dark" href="#">instagram</a></li>
+              </ul>
+            </div>
+            <ul class="footer__nav-contact">
+              <li class="footer__nav-contact-item"><strong class="footer__nav-contact-title">Навигация</strong>
+                <nav class="nav footer__nav nav_column">
+                  <ul class="nav__list">
+                    <li class="nav__item"> <a class="nav__item" href="about.html">Обо мне</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="cases.html">Кейсы</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="#">Рабочий процесс</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="#">Отзывы</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="#">Спринты</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="#">Разбор резюме</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="#">Бизнес-консалтинг</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="blog.html">Блог</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="#">Отзывы</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="contacts.html">Контакты</a></li>
+                  </ul>
+                </nav>
+              </li>
+              <li class="footer__nav-contact-item"><strong class="footer__nav-contact-title">Контакты</strong>
+                <div class="nav footer__contacts nav_column">
+                  <ul class="nav__list">
+                    <li class="nav__item"> <a class="nav__item" href="mailto:a_kabuki@gmail.com">a_kabuki@gmail.com</a></li>
+                    <li class="nav__item"> <a class="nav__item" href="tel:+78629642535">+7 862 964 2535</a></li>
                   </ul>
                 </div>
-                <div class="footer__bottom"><span class="footer__copyright">Все права сохранены © 2022</span><a class="footer__agreement" href="agreement.html">Пользовательское соглашение</a></div>
-              </div>
-            </footer>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__bottom"><span class="footer__copyright">Все права сохранены © 2022</span><a class="footer__agreement" href="agreement.html">Пользовательское соглашение</a></div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
