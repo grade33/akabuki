@@ -1,4 +1,6 @@
 .select {
+  position: relative;
+
   &.is-open {
     .select {
       &__head {
@@ -15,14 +17,11 @@
     }
   }
 
-  &__custom {
-    position: relative;
-    min-width: 150px;
-    background: #fff;
-  }
-
   &__head {
+    display: flex;
+    align-items: center;
     width: 100%;
+    height: 100%;
     border: 1px solid #aaa;
   }
 
@@ -45,9 +44,10 @@
     }
   }
 
-  &__option {
-    margin-bottom: 0;
+  &__option_body {
     margin-bottom: -1px;
+    background: #fff;
+    border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
     transition: background-color 0.3s ease-in-out;
 
@@ -58,8 +58,8 @@
     }
   }
 
-  &__item {
-    display: block;
-    padding: 5px 10px;
+  &__head,
+  &__option_body  {
+    cursor: pointer;
   }
 }

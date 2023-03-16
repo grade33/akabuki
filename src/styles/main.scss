@@ -21,6 +21,7 @@
 @use './partials/normal-list';
 @use './partials/article';
 @use './partials/offer';
+@use './partials/menu';
 
 //  Layouts
 @use './components/heroes/hero';
@@ -31,7 +32,7 @@
 @use './components/footer';
 @use './components/services';
 @use './components/streamlining';
-@use './components/link-list';
+@use './components/cases';
 @use './components/blog';
 @use './components/reviews';
 @use './components/feedback';
@@ -40,6 +41,7 @@
 @use './components/benefits';
 @use './components/answer';
 @use './components/contacts';
+@use './components/popup';
 
 //  Pages
 @use './pages/service-item';

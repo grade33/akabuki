@@ -1,27 +1,21 @@
-@use '../utils/mixins' as mix;
 @use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
 @use '../utils/functions' as fn;
 
 .lang {
   @include mix.p16;
 
+  min-width: 51px;
+
   .select {
-    &__custom {
-      min-width: unset;
-    }
-
-    &__head,
-    &__body,
-    &__option {
-      border-color: vars.$dark;
-    }
-
     &__head,
     &__body {
       border-radius: 12px;
     }
 
-    &__option {
+    &__option_body {
+      background: vars.$white;
+
       &:hover,
       &:focus-visible,
       &:active {
@@ -29,8 +23,44 @@
       }
     }
 
-    &__item {
+    &__head,
+    &__body,
+    &__option_body {
+      border-color: vars.$dark;
+    }
+
+    &__head,
+    &__option_body {
       padding: 7px 15px;
+    }
+  }
+
+  &_big {
+    min-width: 76px;
+
+    .select {
+      &__option {
+        text-transform: uppercase;
+      }
+
+      &__head,
+      &__option_body {
+        padding: 12px 20px;
+      }
+    }
+  }
+
+  &_light {
+    .select {
+      &__option_body {
+        background: vars.$dark;
+      }
+
+      &__head,
+      &__body,
+      &__option_body {
+        border-color: vars.$white;
+      }
     }
   }
 }

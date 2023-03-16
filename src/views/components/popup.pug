@@ -1,0 +1,51 @@
+include ../partials/inputs
+
+mixin popup
+  .popup
+    .popup__window.container(data-popup="contact")
+      .container.popup__container
+        .popup__content 
+          .popup__top
+            .popup__link-block 
+              a.popup__link.btn.btn_white(href="https://t.me/anastasia_kabuki") Написать в Telegram
+              a.popup__link.btn.btn_trs-white(href="hello@akabuki.pro") hello@akabuki.pro
+            button.popup__close.close(type="button" data-popup-close)
+              svg.close__icon
+                use(xlink:href="./assets/sprite.svg#close")
+          .popup__bottom 
+            form.popup__form(action="#") 
+              .popup__fields-block
+                +input({
+                  placeholder: 'Имя',
+                  name: 'name',
+                  type: 'text',
+                  isDark: false,
+                }, 'popup__field')
+                +input({
+                  placeholder: 'Компания',
+                  name: 'company',
+                  type: 'text',
+                  isDark: false,
+                }, 'popup__field')
+                +input({
+                  placeholder: 'Телеграм или номер телефона',
+                  name: 'contact',
+                  type: 'text',
+                  isDark: false,
+                }, 'popup__field')
+                +textarea({
+                  placeholder: 'Расскажите кратко о задаче',
+                  name: 'message',
+                  isDark: false,
+                }, 'popup__field')
+              .popup__form-btn-block
+                +checkbox({
+                  isDark: false,
+                  name: 'amount'
+                }, 'popup__checkbox')
+                  span Я согласен с 
+                  a(href="agreement.html") политикой обработки персональных данных
+                button.btn.btn_circle.popup__submit(type="submit") Отправить
+            picture.popup__img-wrap 
+              img.popup__img(src="@/img/others/popup.jpg" alt="")
+

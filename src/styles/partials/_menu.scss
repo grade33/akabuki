@@ -1,0 +1,76 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  overflow: auto;
+  color: vars.$white;
+  background: vars.$dark;
+  transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+
+  &_active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 93px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  &__btn-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__bid {
+    padding-right: 51px;
+    padding-left: 51px;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      &:not(:first-child) {
+        border-top: 1px solid rgba(vars.$white, 0.1);
+      }
+    }
+
+    &-link {
+      width: 100%;
+      padding: 25px 0;
+      color: rgba(vars.$white, 0.5);
+      @include mix.h3;
+
+      &_active {
+        color: vars.$white;
+      }
+    }
+  }
+}

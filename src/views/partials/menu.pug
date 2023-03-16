@@ -1,0 +1,27 @@
+mixin menu
+  .menu
+    .menu__container.container
+      .menu__top
+        .menu__btn-block
+          select.select.lang.lang_big.lang_light
+            option(value="AM") AM
+            option(value="RU") RU
+            option(value="EN") EN
+          button.menu__bid.btn.btn_white(type="button" data-popup-open="contact") Заявка
+        button.menu__close.close(type="button")
+          svg.close__icon
+            use(xlink:href="./assets/sprite.svg#close")
+      nav.menu__nav
+        ul.menu__nav-list 
+          li.menu__nav-item
+            a.menu__nav-link(href="./about.html") Обо мне
+          li.menu__nav-item
+            a.menu__nav-link(href="./services.html") Услуги
+          li.menu__nav-item
+            a.menu__nav-link(href="./cases.html") Кейсы
+          li.menu__nav-item
+            a.menu__nav-link(href="./meterials.html") Полезные материалы
+          li.menu__nav-item
+            a.menu__nav-link(href="./blog.html") Блог
+          li.menu__nav-item
+            a.menu__nav-link(href="./contacts.html") Контакты

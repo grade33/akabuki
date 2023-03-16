@@ -64,10 +64,24 @@
     }
   }
 
-  &_transparent {
+  &_trs-black {
     color: vars.$dark;
     background-color: transparent;
     border-color: vars.$dark;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: vars.$white;
+      background-color: vars.$red;
+      border-color: vars.$red;
+    }
+  }
+
+  &_trs-white {
+    color: vars.$white;
+    background-color: transparent;
+    border-color: vars.$white;
 
     &:hover,
     &:focus-visible,
@@ -97,6 +111,18 @@
   &__icon {
     width: 15px;
     height: 15px;
+  }
+}
+
+.close {
+  padding: fn.clip(12, 15);
+  color: vars.$dark;
+  background: vars.$white;
+  border-radius: 50%;
+
+  &__icon {
+    width: fn.clip(24, 30);
+    height: fn.clip(24, 30);
   }
 }
 

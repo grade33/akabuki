@@ -1,7 +1,8 @@
 include ../partials/nav
-include ../vendor/select
+include ../partials/menu
 
 mixin header 
+  +menu
   header.header
     .header__container.container
       a.header__logo(href="index.html")
@@ -16,12 +17,11 @@ mixin header
           {content: 'Блог', href: 'blog.html'},
           {content: 'Контакты', href: 'contacts.html'},
         ], true, 'header__nav')
-        +select([
-          {content: 'Ам'},
-          {content: 'Ру', isSelected: true},
-          {content: 'Ан'},
-        ], 'header__lang')
-        button.header__apply.btn.btn_dark(type="button") Заявка
+        select.select.header__lang.lang
+          option(value="Ам") Ам
+          option(value="Ру") Ру
+          option(value="Ан") Ан
+        button.header__bid.btn.btn_dark(type="button" data-popup-open="contact") Заявка
       .header__bar
         .header__burger
           span.header__burger-item

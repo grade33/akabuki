@@ -1,3 +1,7 @@
+include ../components/header
+include ../components/footer
+include ../components/popup
+
 block vars
   - const title = 'Document'
   - const lang = 'ru'
@@ -15,9 +19,8 @@ html(lang=lang)
     title #{title}
   body
     div(class="app " + pageName)
-      include ../components/header
+      +popup
       +header
       .main
         block content
-      include ../components/footer
       +footer

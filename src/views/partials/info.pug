@@ -13,7 +13,7 @@ mixin info(data)
             each item in data.list
               li.info__item=item
       if data.link
-        a.info__link.btn_big.btn.btn_transparent(href=data.link.href)
+        a.info__link.btn_big.btn.btn_trs-black(href=data.link.href)
           =data.link.text
           svg.btn__icon
             use(xlink:href="./assets/sprite.svg#arrow-right")

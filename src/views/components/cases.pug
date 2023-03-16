@@ -1,0 +1,25 @@
+mixin cases(data, linkList)
+  section.cases.section(class=data.isDark ? 'cases_dark' : '')
+    .cases__container.container.column
+      h2.cases__title.title=data.title
+      ul.cases__list
+        each item in linkList
+          li.cases__item 
+            a.cases__link(href="cases.html")
+              if item.src 
+                picture.cases__img-wrap.wh100
+                  img.cases__img(src=item.src, alt="")
+              .cases__left
+                h3.cases__name=item.name
+                if item.info
+                  .cases__info-block
+                    each info in item.info
+                      .cases__info.btn(class=data.isDark ? 'btn_white' : 'btn_dark')=info
+              .cases__right 
+                p.cases__desc=item.desc
+                +btn-arrow({
+                  isRight: true,
+                  isDark: data.isDark,
+                  isArrow: true
+                }, 'cases__btn')
+      button.cases__more.btn.btn_circle(type="button")=data.btn

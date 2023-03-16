@@ -2,14 +2,14 @@
 @use '../utils/variables' as vars;
 @use '../utils/functions' as fn;
 
-.link-list {
+.cases {
   background: vars.$light-bg;
 
   &_dark {
     color: vars.$white;
     background: vars.$dark;
 
-    .link-list {
+    .cases {
       &__btn {
         border-color: vars.$divider-on-dark-bg;
       }
@@ -22,7 +22,7 @@
             background: vars.$hover-cards-on-dark-bg;
           }
 
-          .link-list {
+          .cases {
             &__btn {
               background: vars.$white;
               border-color: vars.$white;
@@ -85,7 +85,7 @@
         background: vars.$hover-cards-on-light-bg;
       }
 
-      .link-list {
+      .cases {
         &__btn {
           background: vars.$dark;
           border-color: vars.$dark;

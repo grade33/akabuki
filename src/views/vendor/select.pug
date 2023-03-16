@@ -1,8 +1,0 @@
-mixin select(data, className = '')
-  .select.lang(class=className)
-    .select__custom
-      button.select__head(type="button") 
-      .select__body 
-        each option in data
-          button.select__option(class=option.isSelected ? 'is-selected' : '')
-            span.select__item=option.content
