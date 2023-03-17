@@ -8792,9 +8792,39 @@ function swiper_toPrimitive(input, hint) { if (swiper_typeof(input) !== "object"
  // eslint-disable-line import/no-unresolved
 
 
+function setCursorOnHover(swiper) {
+  var swiperEl = swiper.el;
+  swiperEl.addEventListener('mousemove', function (e) {
+    var blockRect = swiperEl.getBoundingClientRect();
+    var mouseX = e.clientX - blockRect.left;
+    var blockWidth = blockRect.width;
+    /* eslint-disable */
+    if (mouseX < blockWidth / 2) {
+      swiperEl.style.cursor = "url('../../assets/img/others/cursor-prev.svg'), pointer";
+    } else {
+      swiperEl.style.cursor = "url('../../assets/img/others/cursor-next.svg'), pointer";
+    }
+    /* eslint-enable */
+  });
+
+  swiperEl.addEventListener('click', function (e) {
+    var blockRect = swiperEl.getBoundingClientRect();
+    var mouseX = e.clientX - blockRect.left;
+    var blockWidth = blockRect.width;
+
+    /* eslint-disable */
+    if (mouseX < blockWidth / 2) {
+      swiper.slidePrev();
+    } else {
+      swiper.slideNext();
+    }
+    /* eslint-enable */
+  });
+}
+
 function initSwiperStreamlining() {
   var classSwiper = classNames.swiper.streamlining.swiper;
-  return new core(".".concat(classSwiper), {
+  var swiper = new core(".".concat(classSwiper), {
     modules: [Navigation],
     navigation: {
       prevEl: ".".concat(classNames.swiper.streamlining.prevBtn),
@@ -8804,10 +8834,12 @@ function initSwiperStreamlining() {
     spaceBetween: 20,
     speed: 1000
   });
+  setCursorOnHover(swiper);
+  return swiper;
 }
 function initSwiperBlog() {
   var classSwiper = classNames.swiper.blog;
-  return new core(".".concat(classSwiper), {
+  var swiper = new core(".".concat(classSwiper), {
     slidesPerView: 1.155,
     spaceBetween: 20,
     speed: 1000,
@@ -8815,6 +8847,8 @@ function initSwiperBlog() {
       slidesPerView: 2.058
     })
   });
+  setCursorOnHover(swiper);
+  return swiper;
 }
 function initSwiperReviews() {
   var _breakpoints2;

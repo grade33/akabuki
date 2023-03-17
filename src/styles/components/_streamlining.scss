@@ -19,7 +19,7 @@
       justify-content: center;
       margin-top: 32px;
 
-      @media (min-width: vars.$lg) {
+      @media (min-width: vars.$min-lg) {
         display: none;
       }
     }

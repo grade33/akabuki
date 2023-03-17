@@ -14,10 +14,6 @@
   }
 
   &__item {
-    height: 100%;
-  }
-
-  &__link {
     display: flex;
     flex-direction: column;
     gap: fn.clip(24, 32);

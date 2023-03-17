@@ -7,12 +7,13 @@ mixin blog(blogList, title)
           ul.swiper-wrapper 
             each blog in blogList
               li.swiper-slide
-                a.blog__link(href="blog.html") 
+                .blog__item
                   .blog__img-block
                     picture.blog__img-wrap.wh100
                       if blog.srcMobile
                         source(media="(max-width: 991.98px)", srcset=blog.srcMobile)
                       img.blog__img(src=blog.src, alt="")
                     span.blog__date.btn.btn_white=blog.date
-                  h3.blog__name=blog.name
+                  h3.blog__name
+                    a(href="blog.html")=blog.name
       button.blog__more.btn.btn_circle(type="button") Читать ещё

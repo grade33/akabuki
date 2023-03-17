@@ -7,10 +7,39 @@ import 'swiper/css/scrollbar'; // eslint-disable-line import/no-unresolved
 import { breakpointsMin } from '../utils/breakpoints';
 import { classNames } from '../utils/classNames';
 
+function setCursorOnHover(swiper) {
+  const swiperEl = swiper.el;
+  swiperEl.addEventListener('mousemove', (e) => {
+    const blockRect = swiperEl.getBoundingClientRect();
+    const mouseX = e.clientX - blockRect.left;
+    const blockWidth = blockRect.width;
+    /* eslint-disable */
+    if (mouseX < blockWidth / 2) {
+      swiperEl.style.cursor = `url('../../assets/img/others/cursor-prev.svg'), pointer`;
+    } else {
+      swiperEl.style.cursor = `url('../../assets/img/others/cursor-next.svg'), pointer`;
+    }
+    /* eslint-enable */
+  });
+  swiperEl.addEventListener('click', (e) => {
+    const blockRect = swiperEl.getBoundingClientRect();
+    const mouseX = e.clientX - blockRect.left;
+    const blockWidth = blockRect.width;
+
+    /* eslint-disable */
+    if (mouseX < blockWidth / 2) {
+      swiper.slidePrev();
+    } else {
+      swiper.slideNext();
+    }
+    /* eslint-enable */
+  });
+}
+
 export function initSwiperStreamlining() {
   const classSwiper = classNames.swiper.streamlining.swiper;
 
-  return new Swiper(`.${classSwiper}`, {
+  const swiper = new Swiper(`.${classSwiper}`, {
     modules: [Navigation],
     navigation: {
       prevEl: `.${classNames.swiper.streamlining.prevBtn}`,
@@ -20,12 +49,15 @@ export function initSwiperStreamlining() {
     spaceBetween: 20,
     speed: 1000,
   });
+
+  setCursorOnHover(swiper);
+  return swiper;
 }
 
 export function initSwiperBlog() {
   const classSwiper = classNames.swiper.blog;
 
-  return new Swiper(`.${classSwiper}`, {
+  const swiper = new Swiper(`.${classSwiper}`, {
     slidesPerView: 1.155,
     spaceBetween: 20,
     speed: 1000,
@@ -35,6 +67,9 @@ export function initSwiperBlog() {
       },
     },
   });
+
+  setCursorOnHover(swiper);
+  return swiper;
 }
 
 export function initSwiperReviews() {

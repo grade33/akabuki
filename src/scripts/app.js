@@ -4,13 +4,13 @@ import {
   initSwiperReviews,
   initSwiperStreamlining,
 } from './modules/swiper';
-
-import 'normalize.css';
-import '../styles/main.scss';
 import { initAcc } from './modules/accordion';
 import { closePopup, openPopup } from './modules/popups';
 import { headerBlur, headerHide } from './modules/header';
 import { burgerMenu } from './modules/burger-menu';
+
+import 'normalize.css';
+import '../styles/main.scss';
 
 // Header
 headerBlur();
@@ -33,4 +33,3 @@ initSwiperReviews();
 
 // Accordion
 initAcc();
-
