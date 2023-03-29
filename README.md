@@ -1,2 +1,2 @@
-# Akabuki - https://einzelwerk.github.io/akabuki/
+# Akabuki - https://grade33.github.io/akabuki/
 
